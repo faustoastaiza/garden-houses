@@ -1,0 +1,1903 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Garden Houses — Casas con jardín propio · Norte de Armenia · BTO Constructora</title>
+<meta name="description" content="Garden Houses es un conjunto de casas con jardín privado y wellness integrado en el norte de Armenia. Etapa 2 en preventa. Licencia aprobada · Entrega 2028.">
+<meta name="theme-color" content="#14201B">
+
+<meta property="og:title" content="Garden Houses — Una casa con jardín propio en el norte de Armenia">
+<meta property="og:description" content="Casas de BTO Constructora. Etapa 2 en preventa. Entrega 2028.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style-system.css">
+
+<style>
+  /* ========== LAYOUT BASE ========== */
+  html { scroll-behavior: smooth; }
+  body { min-height: 100vh; }
+  ::selection { background: var(--accent); color: var(--on-dark); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .page-wrap { padding-inline: clamp(20px, 3.6vw, 72px); }
+  section { scroll-margin-top: 96px; }
+
+  /* ========== NAV (glass transparente · letras blancas) ========== */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    backdrop-filter: blur(18px) saturate(1.4);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+    background: rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.18),
+      0 8px 32px -12px rgba(0, 0, 0, 0.25);
+    transition: background .35s var(--e-out), border-color .35s var(--e-out), box-shadow .35s var(--e-out);
+  }
+  .nav.scrolled {
+    background: rgba(14, 19, 15, 0.32);
+    border-bottom-color: rgba(255, 255, 255, 0.14);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      0 16px 40px -18px rgba(0, 0, 0, 0.35);
+  }
+  body.gh { padding-top: 0; }
+
+  /* Nav contents — blanco */
+  .nav .brand { color: #FFFFFF; }
+  .nav .brand-mark {
+    background: rgba(255, 255, 255, 0.14);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(8px);
+  }
+  .nav .brand-txt .b1 { color: #FFFFFF; }
+  .nav .brand-txt .b2 { color: rgba(255, 255, 255, 0.65); }
+  .nav .nav-links a { color: #FFFFFF; }
+  .nav .nav-links a:hover { color: #E6D9A8; }
+  .nav .nav-links a::after { background: #E6D9A8; }
+  .nav .nav-toggle {
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .nav .nav-toggle span,
+  .nav .nav-toggle span::before,
+  .nav .nav-toggle span::after { background: #FFFFFF; }
+  .nav-mobile {
+    background: rgba(14, 19, 15, 0.85);
+    backdrop-filter: blur(22px) saturate(1.4);
+    -webkit-backdrop-filter: blur(22px) saturate(1.4);
+    border-top-color: rgba(255, 255, 255, 0.1);
+  }
+  .nav-mobile a {
+    color: #FFFFFF;
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+  }
+  .nav-mobile a:hover { color: #E6D9A8; }
+  .nav-inner {
+    display: grid; grid-template-columns: auto 1fr auto;
+    align-items: center; gap: 24px;
+    padding: 18px clamp(20px, 3.6vw, 72px);
+  }
+  .brand {
+    display: flex; align-items: center; gap: 14px;
+    text-decoration: none; color: var(--ink);
+  }
+  .brand-logo {
+    height: 44px; width: auto; display: block;
+    filter: brightness(0) invert(1);
+    transition: filter .35s var(--e-out);
+  }
+  .nav.scrolled .brand-logo { filter: brightness(0) invert(1); }
+  .brand-txt { display: flex; flex-direction: column; line-height: 1; padding-left: 14px; border-left: 1px solid rgba(255,255,255,.22); }
+  .brand-txt .b1 { font-family: var(--f-display); font-size: 18px; font-weight: 400; letter-spacing: -.01em; }
+  .brand-txt .b2 { font-family: var(--f-mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-muted); }
+  @media (max-width: 540px) {
+    .brand-logo { height: 36px; }
+    .brand-txt { display: none; }
+  }
+
+  .nav-links { display: flex; gap: 28px; justify-self: center; }
+  .nav-links a {
+    font-family: var(--f-sans); font-size: 13.5px; font-weight: 500;
+    color: var(--ink); text-decoration: none;
+    letter-spacing: .01em; position: relative; padding: 4px 0;
+    transition: color .2s var(--e-out);
+  }
+  .nav-links a::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 1px;
+    background: var(--accent); transform: scaleX(0); transform-origin: left;
+    transition: transform .25s var(--e-out);
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+
+  .nav-cta { display: inline-flex; align-items: center; gap: 8px; }
+  .nav-toggle {
+    display: none; width: 40px; height: 40px;
+    border: 1px solid var(--line); background: transparent;
+    border-radius: 999px; cursor: pointer;
+    align-items: center; justify-content: center;
+  }
+  .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
+    content:""; display:block; width: 16px; height: 1.5px; background: var(--ink);
+    position: relative; transition: transform .3s var(--e-out);
+  }
+  .nav-toggle span::before { position: absolute; top: -5px; left: 0; width: 16px; }
+  .nav-toggle span::after { position: absolute; top: 5px; left: 0; width: 16px; }
+
+  @media (max-width: 960px) {
+    .nav-inner { grid-template-columns: auto 1fr auto; }
+    .nav-links { display: none; }
+    .nav-toggle { display: inline-flex; }
+    .nav-cta .btn-label-full { display: none; }
+  }
+
+  .nav-mobile {
+    display: none; padding: 16px clamp(20px, 3.6vw, 72px) 24px;
+    border-top: 1px solid var(--line);
+    background: var(--bg);
+  }
+  .nav-mobile.open { display: block; }
+  .nav-mobile a {
+    display: block; padding: 12px 0;
+    font-family: var(--f-display); font-size: 22px; font-weight: 400;
+    color: var(--ink); text-decoration: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-mobile a:last-child { border-bottom: 0; }
+
+  /* ========== BUTTONS ========== */
+  .btn-olive {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 26px;
+    font-family: var(--f-sans); font-size: 14px; font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--on-dark); background: var(--accent);
+    border: 1px solid var(--accent); border-radius: 999px;
+    text-decoration: none; cursor: pointer;
+    transition: transform .25s var(--e-out), background .25s var(--e-out), box-shadow .25s var(--e-out);
+    box-shadow: 0 1px 2px rgba(20,32,27,.08), 0 8px 24px -12px rgba(20,32,27,.35);
+  }
+  .btn-olive:hover { background: var(--accent-2); border-color: var(--accent-2); transform: translateY(-1px); }
+  .btn-olive.lg { padding: 20px 32px; font-size: 15px; }
+  .btn-olive svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+  .btn-line {
+    display: inline-flex; align-items: baseline; gap: 8px;
+    color: var(--ink); text-decoration: none;
+    font-family: var(--f-sans); font-size: 14px; font-weight: 500;
+    letter-spacing: .01em;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 3px;
+    transition: color .2s var(--e-out), border-color .2s var(--e-out);
+  }
+  .btn-line:hover { color: var(--accent); border-color: var(--accent); }
+  .on-dark-txt { color: var(--on-dark) !important; border-color: var(--on-dark) !important; }
+  .on-dark-txt:hover { color: var(--bg-soft) !important; border-color: var(--bg-soft) !important; }
+
+  /* ========== HERO ========== */
+  .hero {
+    position: relative; min-height: min(92vh, 900px);
+    display: flex; align-items: flex-end;
+    color: var(--on-dark);
+    overflow: hidden;
+  }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; }
+  .hero-img {
+    position: absolute; inset: 0;
+    background-image: url("img/59_FACHADA-POSTERIOR.webp");
+    background-size: cover; background-position: center;
+    background-color: #2E3A2B;
+    animation: heroZoom 14s var(--e-out) forwards;
+    will-change: transform;
+  }
+  @keyframes heroZoom {
+    from { transform: scale(1.1); }
+    to { transform: scale(1); }
+  }
+
+  /* Fill-cover image helper (replaces .placeholder-img) */
+  .img-cover {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
+    display: block;
+  }
+  .hero-veil {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(14,19,15,.45) 0%, rgba(14,19,15,.55) 45%, rgba(14,19,15,.85) 100%),
+      linear-gradient(100deg, rgba(14,19,15,.55), transparent 60%);
+  }
+  .hero-veil::after {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(60% 50% at 20% 80%, rgba(95,111,62,.25), transparent 60%),
+      radial-gradient(50% 40% at 80% 20%, rgba(215,179,74,.12), transparent 60%);
+    mix-blend-mode: soft-light;
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    width: 100%;
+    padding: 140px clamp(20px, 3.6vw, 72px) 100px;
+    display: grid; gap: clamp(32px, 4vw, 56px);
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 8px 14px 8px 12px;
+    background: rgba(236, 230, 214, 0.14);
+    border: 1px solid rgba(236, 230, 214, 0.36);
+    backdrop-filter: blur(8px);
+    border-radius: 999px;
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--on-dark);
+    width: max-content;
+  }
+  .hero-badge .pulse {
+    width: 8px; height: 8px; border-radius: 50%; background: #D7B34A;
+    box-shadow: 0 0 0 0 rgba(215,179,74,.7);
+    animation: pulse 2.2s var(--e-out) infinite;
+  }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(215,179,74,.55); }
+    70%  { box-shadow: 0 0 0 10px rgba(215,179,74,0); }
+    100% { box-shadow: 0 0 0 0 rgba(215,179,74,0); }
+  }
+
+  .hero h1 {
+    margin: 0; font-family: var(--f-display);
+    font-weight: 300; font-size: clamp(48px, 7.4vw, 124px);
+    line-height: .94; letter-spacing: -.028em;
+    max-width: 18ch;
+  }
+  .hero h1 em { font-style: italic; font-weight: 300; color: #E6D9A8; }
+  .hero-sub {
+    max-width: 56ch; font-size: clamp(16px, 1.2vw, 19px);
+    line-height: 1.5; color: rgba(236,230,214,.86);
+  }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+  .hero-meta {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: rgba(236,230,214,.7);
+    padding-top: 20px; border-top: 1px solid rgba(236,230,214,.22);
+    display: flex; gap: 20px; flex-wrap: wrap;
+  }
+  .hero-meta span { display: inline-flex; align-items: center; gap: 6px; }
+  .hero-meta i { width: 4px; height: 4px; border-radius: 50%; background: #D7B34A; display: inline-block; }
+
+  .scroll-cue {
+    position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%);
+    font-family: var(--f-mono); font-size: 10px; letter-spacing: .22em; text-transform: uppercase;
+    color: rgba(236,230,214,.7);
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    z-index: 2;
+  }
+  .scroll-cue .line { width: 1px; height: 38px; background: linear-gradient(180deg, rgba(236,230,214,.6), transparent); animation: drop 2.6s var(--e-in-out) infinite; }
+  @keyframes drop {
+    0%, 100% { transform: scaleY(.3); transform-origin: top; opacity: .3; }
+    50% { transform: scaleY(1); opacity: 1; }
+  }
+
+  /* ========== CONFIDENCE BAR ========== */
+  .confidence {
+    background: var(--bg-soft);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .confidence-row {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    padding: 26px clamp(20px, 3.6vw, 72px);
+    gap: 24px;
+  }
+  .confidence-row-3 { grid-template-columns: repeat(3, 1fr); padding: 32px clamp(20px, 3.6vw, 72px); }
+  .confidence-item {
+    display: flex; align-items: center; gap: 14px;
+    padding-right: 24px; border-right: 1px solid var(--line);
+    font-size: 13.5px; line-height: 1.35; color: var(--ink-muted);
+  }
+  .confidence-item:last-child { border-right: 0; padding-right: 0; }
+  .confidence-item strong { color: var(--ink); font-weight: 500; }
+  .confidence-item .ci-sub {
+    font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--ink-faint); display: inline-block; margin-top: 3px;
+  }
+  .confidence-icon {
+    width: 32px; height: 32px; flex-shrink: 0;
+    border: 1px solid var(--line-dark); border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--ink);
+  }
+  @media (max-width: 860px) {
+    .confidence-row { grid-template-columns: 1fr 1fr; row-gap: 18px; }
+    .confidence-item:nth-child(2) { border-right: 0; }
+    .confidence-item { border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+    .confidence-item:nth-last-child(-n+2) { border-bottom: 0; padding-bottom: 0; }
+  }
+  @media (max-width: 520px) {
+    .confidence-row { grid-template-columns: 1fr; }
+    .confidence-item { border-right: 0 !important; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+    .confidence-item:last-child { border-bottom: 0; padding-bottom: 0; }
+  }
+
+  /* ========== SECTION SHELL ========== */
+  .section { padding: clamp(80px, 10vw, 160px) 0; }
+  .section-sm { padding: clamp(60px, 7vw, 100px) 0; }
+  .eyebrow-gold { color: var(--gold); }
+  .section-head {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    gap: clamp(32px, 5vw, 80px); align-items: end;
+    padding: 0 clamp(20px, 3.6vw, 72px);
+    margin-bottom: clamp(40px, 5vw, 72px);
+  }
+  .section-head.center { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+  @media (max-width: 780px){ .section-head { grid-template-columns: 1fr; } }
+  .section-title {
+    font-family: var(--f-display); font-weight: 300;
+    font-size: clamp(36px, 4.6vw, 68px); line-height: 1.02;
+    letter-spacing: -.022em; margin: 14px 0 0; max-width: 18ch;
+  }
+  .section-title em { font-style: italic; }
+  .section-head.center .section-title { max-width: 22ch; }
+  .section-lead {
+    color: var(--ink-muted); font-size: clamp(16px, 1.2vw, 19px);
+    line-height: 1.5; max-width: 52ch;
+  }
+
+  /* ========== 03 · INTRO NARRATIVA ========== */
+  .narrative {
+    display: grid; grid-template-columns: 1.2fr 1fr;
+    gap: clamp(40px, 5vw, 80px);
+    padding: 0 clamp(20px, 3.6vw, 72px);
+    align-items: center;
+  }
+  @media (max-width: 860px){ .narrative { grid-template-columns: 1fr; } }
+  .narrative-text h2 {
+    font-family: var(--f-display); font-weight: 300;
+    font-size: clamp(40px, 5.4vw, 80px); line-height: 1; letter-spacing: -.025em;
+    margin: 16px 0 32px; max-width: 14ch;
+  }
+  .narrative-text h2 em { font-style: italic; }
+  .narrative-text p {
+    font-size: clamp(17px, 1.35vw, 21px);
+    line-height: 1.55; color: var(--ink-muted); max-width: 52ch;
+    margin: 0 0 32px;
+  }
+  .narrative-sig {
+    font-family: var(--f-display); font-style: italic; font-weight: 300;
+    font-size: 18px; color: var(--ink);
+    padding-top: 16px; border-top: 1px solid var(--line); width: max-content;
+  }
+  .narrative-img {
+    position: relative; aspect-ratio: 4/5; border-radius: var(--radius-md);
+    overflow: hidden; background: var(--bg-soft);
+  }
+
+  /* ========== 04 · UBICACIÓN ========== */
+  .location {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 5vw, 80px);
+    padding: 0 clamp(20px, 3.6vw, 72px);
+    align-items: center;
+  }
+  @media (max-width: 860px){ .location { grid-template-columns: 1fr; } }
+  .map-frame {
+    position: relative; aspect-ratio: 1/1; border-radius: var(--radius-md);
+    background: var(--bg-soft); overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: 0 24px 60px -28px rgba(20, 32, 27, 0.22);
+  }
+  .map-svg { width: 100%; height: 100%; display: block; }
+  .map-embed {
+    width: 100%; height: 100%; display: block;
+    filter: saturate(.85) contrast(1.02);
+  }
+  .location-list { list-style: none; padding: 0; margin: 32px 0 0; }
+  .location-list li {
+    display: grid; grid-template-columns: 32px 1fr auto;
+    align-items: center; gap: 16px;
+    padding: 18px 0; border-bottom: 1px solid var(--line);
+    font-size: 15px;
+  }
+  .location-list li:last-child { border-bottom: 0; }
+  .location-list .ic {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--bg-soft); color: var(--accent);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 14px;
+  }
+  .location-list .time {
+    font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em;
+    color: var(--ink-muted); text-transform: uppercase;
+  }
+
+  /* ========== 05 · CONCEPTO (3 TARJETAS) ========== */
+  .concept-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: clamp(20px, 2.2vw, 36px);
+    padding: 0 clamp(20px, 3.6vw, 72px);
+  }
+  @media (max-width: 860px){ .concept-grid { grid-template-columns: 1fr; } }
+  .concept-card {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius-md);
+    padding: 0; overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform .3s var(--e-out), box-shadow .3s var(--e-out);
+  }
+  .concept-card:hover { transform: translateY(-3px); box-shadow: 0 20px 40px -24px rgba(20,32,27,.22); }
+  .concept-img { position: relative; aspect-ratio: 4/3; }
+  .concept-body { padding: 28px 28px 32px; display: flex; flex-direction: column; flex: 1; }
+  .concept-icon {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--bg); color: var(--accent);
+    border: 1px solid var(--line);
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+  }
+  .concept-card h3 {
+    font-family: var(--f-display); font-weight: 400;
+    font-size: clamp(22px, 1.9vw, 28px); line-height: 1.15;
+    letter-spacing: -.012em; margin: 0 0 10px;
+  }
+  .concept-card p { margin: 0; color: var(--ink-muted); font-size: 15.5px; line-height: 1.55; }
+
+  /* ========== 06 · AMENIDADES MOSAICO ========== */
+  .amenities {
+    padding: 0 clamp(20px, 3.6vw, 72px);
+    display: grid; grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 220px;
+    gap: clamp(12px, 1.2vw, 20px);
+  }
+  .amenity { position: relative; overflow: hidden; border-radius: var(--radius-md); }
+  .amenity .label {
+    position: absolute; left: 16px; bottom: 16px;
+    padding: 8px 14px; background: rgba(20,32,27,.72);
+    backdrop-filter: blur(8px);
+    border-radius: 999px;
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em;
+    color: var(--on-dark); text-transform: uppercase;
+  }
+  .a-pool       { grid-column: span 4; grid-row: span 2; }
+  .a-sauna      { grid-column: span 2; grid-row: span 1; }
+  .a-turkish    { grid-column: span 2; grid-row: span 1; }
+  .a-gym        { grid-column: span 2; grid-row: span 1; }
+  .a-playground { grid-column: span 2; grid-row: span 1; }
+  .a-pet        { grid-column: span 2; grid-row: span 1; }
+  @media (max-width: 860px){
+    .amenities { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+    .amenity { grid-column: span 1 !important; grid-row: span 1 !important; }
+    .a-pool { grid-column: span 2 !important; grid-row: span 2 !important; }
+  }
+
+  /* ========== 07 · TIPOLOGÍAS ========== */
+  .typo-wrap { padding: 0 clamp(20px, 3.6vw, 72px); }
+  .typo-plan.typo-plan-img { aspect-ratio: 4/3; padding: 0; background: #FAF7F0; }
+  .typo-plan.typo-plan-img img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    padding: clamp(12px, 2vw, 28px);
+    display: block;
+  }
+  .typo-tab .t-num {
+    font-family: var(--f-mono); font-size: 10px; letter-spacing: .14em;
+    opacity: .55; margin-right: 8px;
+  }
+  .floor-tag {
+    display: inline-block;
+    font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 12px;
+    padding: 5px 12px;
+    border: 1px solid currentColor; border-radius: 999px;
+  }
+  .floor-features {
+    list-style: none; padding: 0; margin: 0 0 28px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px;
+  }
+  .floor-features li {
+    position: relative; padding: 14px 0 14px 22px;
+    font-size: 14.5px; color: var(--ink); line-height: 1.35;
+    border-bottom: 1px solid var(--line);
+  }
+  .floor-features li::before {
+    content: ""; position: absolute; left: 0; top: 22px;
+    width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+  }
+  @media (max-width: 540px) { .floor-features { grid-template-columns: 1fr; } }
+
+  /* Ficha técnica (spec card) */
+  .spec-card {
+    margin: clamp(48px, 5vw, 72px) clamp(20px, 3.6vw, 72px) 0;
+    padding: clamp(36px, 4.5vw, 56px);
+    background: rgba(255, 255, 255, 0.58);
+    backdrop-filter: blur(14px) saturate(1.2);
+    -webkit-backdrop-filter: blur(14px) saturate(1.2);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: var(--radius-md);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.85),
+      0 28px 60px -28px rgba(20, 32, 27, 0.18);
+  }
+  .spec-title {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink-muted); margin: 0 0 28px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .spec-title::after {
+    content: ""; flex: 1; height: 1px; background: var(--line);
+  }
+  .spec-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0 32px;
+  }
+  .spec-item {
+    display: flex; flex-direction: column; gap: 10px;
+    padding: 22px 0; border-top: 1px solid var(--line);
+  }
+  .spec-label {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .spec-value {
+    font-family: var(--f-display); font-size: clamp(24px, 2.2vw, 32px);
+    font-weight: 400; letter-spacing: -.012em; color: var(--ink); line-height: 1;
+  }
+  .spec-value em {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em;
+    color: var(--ink-muted); margin-left: 4px; font-style: normal; text-transform: uppercase;
+  }
+  @media (max-width: 960px) { .spec-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 720px) { .spec-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 460px) { .spec-grid { grid-template-columns: 1fr; } }
+  .spec-cta {
+    margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--line);
+    display: flex; flex-wrap: wrap; gap: 16px;
+    align-items: center; justify-content: space-between;
+  }
+  .spec-cta .spec-note {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .typo-tabs {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    padding-bottom: 28px; border-bottom: 1px solid var(--line);
+    margin-bottom: 40px;
+  }
+  .typo-tab {
+    font-family: var(--f-sans); font-size: 13.5px; font-weight: 500; letter-spacing: .01em;
+    padding: 10px 20px; border-radius: 999px;
+    border: 1px solid var(--line); background: transparent;
+    color: var(--ink-muted); cursor: pointer;
+    transition: background .2s var(--e-out), color .2s var(--e-out), border-color .2s var(--e-out);
+  }
+  .typo-tab:hover { color: var(--ink); border-color: var(--ink); }
+  .typo-tab.active { background: var(--bg-dark); color: var(--on-dark); border-color: var(--bg-dark); }
+
+  .typo-panel { display: none; grid-template-columns: 1.1fr 1fr; gap: clamp(32px, 4vw, 64px); align-items: start; }
+  .typo-panel.active { display: grid; animation: fadeUp .35s var(--e-out); }
+  @media (max-width: 860px){ .typo-panel.active { grid-template-columns: 1fr; } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  .typo-plan {
+    position: relative; aspect-ratio: 4/3;
+    background: var(--bg-soft); border: 1px solid var(--line);
+    border-radius: var(--radius-md); overflow: hidden;
+  }
+  .typo-plan svg { width: 100%; height: 100%; display: block; }
+  .typo-data dl {
+    display: grid; grid-template-columns: auto 1fr;
+    gap: 0 24px; margin: 0 0 32px;
+  }
+  .typo-data dt {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--ink-muted);
+    padding: 16px 0; border-bottom: 1px solid var(--line);
+    align-content: center;
+  }
+  .typo-data dd {
+    margin: 0; padding: 16px 0; border-bottom: 1px solid var(--line);
+    font-family: var(--f-display); font-size: 22px; font-weight: 400; letter-spacing: -.01em;
+    text-align: right;
+  }
+  .typo-data dd .pending { color: var(--ink-faint); font-size: 13px; font-family: var(--f-mono); letter-spacing: .06em; text-transform: uppercase; }
+  .typo-name {
+    font-family: var(--f-display); font-weight: 400;
+    font-size: clamp(28px, 2.6vw, 42px); line-height: 1.05; letter-spacing: -.012em;
+    margin: 0 0 8px;
+  }
+  .typo-blurb { color: var(--ink-muted); font-size: 15.5px; line-height: 1.55; margin: 0 0 28px; max-width: 46ch; }
+
+  /* ========== 08 · ETAPA 1 VS 2 ========== */
+  .stages { display: grid; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 860px){ .stages { grid-template-columns: 1fr; } }
+  .stage-col {
+    padding: clamp(56px, 7vw, 100px) clamp(20px, 3.6vw, 72px);
+    display: grid; align-content: center; gap: 24px;
+  }
+  .stage-1 { background: var(--bg-soft); }
+  .stage-2 { background: var(--bg-dark); color: var(--on-dark); }
+  .stage-2 .eyebrow { color: #D7B34A; }
+  .stage-col h3 {
+    font-family: var(--f-display); font-weight: 300;
+    font-size: clamp(36px, 4.2vw, 60px); line-height: 1.02; letter-spacing: -.022em;
+    margin: 0; max-width: 14ch;
+  }
+  .stage-col p { color: var(--ink-muted); font-size: 16px; line-height: 1.55; max-width: 44ch; margin: 0; }
+  .stage-2 p { color: rgba(236,230,214,.78); }
+  .stage-img { position: relative; aspect-ratio: 16/9; border-radius: var(--radius-md); overflow: hidden; }
+
+  .progress-wrap { margin-top: 8px; }
+  .progress-label {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    color: rgba(236,230,214,.7); display: flex; justify-content: space-between; margin-bottom: 10px;
+  }
+  .progress-bar {
+    height: 6px; background: rgba(236,230,214,.14);
+    border-radius: 999px; overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%; width: 62%;
+    background: linear-gradient(90deg, #D7B34A, #A8832E);
+    border-radius: 999px;
+  }
+
+  /* ========== 09 · INVERSIÓN ========== */
+  .invest-wrap { padding: 0 clamp(20px, 3.6vw, 72px); display: grid; gap: clamp(60px, 8vw, 120px); }
+  .invest-row {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 4vw, 72px); align-items: center;
+  }
+  .invest-row.reverse .invest-img { order: 2; }
+  @media (max-width: 860px){
+    .invest-row, .invest-row.reverse { grid-template-columns: 1fr; }
+    .invest-row.reverse .invest-img { order: 0; }
+  }
+  .invest-img {
+    position: relative; aspect-ratio: 4/3; border-radius: var(--radius-md); overflow: hidden;
+  }
+  .invest-num {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 14px;
+  }
+  .invest-row h3 {
+    font-family: var(--f-display); font-weight: 400;
+    font-size: clamp(28px, 2.8vw, 44px); line-height: 1.05; letter-spacing: -.012em;
+    margin: 0 0 18px; max-width: 18ch;
+  }
+  .invest-row p { color: var(--ink-muted); font-size: 16px; line-height: 1.6; margin: 0; max-width: 46ch; }
+
+  /* ========== 11 · BTO (AUTORIDAD) ========== */
+  .bto {
+    background: var(--bg-dark); color: var(--on-dark);
+    padding: clamp(80px, 10vw, 140px) clamp(20px, 3.6vw, 72px);
+    display: grid; grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(40px, 5vw, 80px); align-items: center;
+  }
+  @media (max-width: 860px){ .bto { grid-template-columns: 1fr; } }
+  .bto-portrait {
+    position: relative; aspect-ratio: 3/4;
+    border-radius: var(--radius-md); overflow: hidden;
+    background: linear-gradient(160deg, #3A4238, #1E2621);
+  }
+  .bto-portrait img {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; filter: grayscale(.25) brightness(.85) contrast(1.05);
+  }
+  .bto-portrait::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(14,19,15,.55));
+    pointer-events: none;
+  }
+  .bto .eyebrow { color: #D7B34A; }
+  .bto h2 {
+    font-family: var(--f-display); font-weight: 300;
+    font-size: clamp(36px, 4.2vw, 60px); line-height: 1.02; letter-spacing: -.022em;
+    margin: 14px 0 28px; max-width: 16ch;
+  }
+  .bto p { color: rgba(236,230,214,.78); font-size: 16px; line-height: 1.6; max-width: 52ch; margin: 0 0 40px; }
+  .bto-quote {
+    font-family: var(--f-display); font-style: italic; font-weight: 300;
+    font-size: clamp(22px, 2.2vw, 32px); line-height: 1.3;
+    color: var(--on-dark); max-width: 32ch;
+    padding-left: 24px; border-left: 2px solid #D7B34A;
+    margin: 0 0 18px;
+  }
+  .bto-attribution {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: rgba(236,230,214,.6); margin-bottom: 36px;
+  }
+
+  /* ========== 12 · GALERÍA ========== */
+  .gallery {
+    display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+    gap: 16px; padding: 0 clamp(20px, 3.6vw, 72px) 24px;
+    scrollbar-width: thin; scrollbar-color: var(--line-dark) transparent;
+  }
+  .gallery::-webkit-scrollbar { height: 6px; }
+  .gallery::-webkit-scrollbar-thumb { background: var(--line-dark); border-radius: 999px; }
+  .gallery-item {
+    flex: 0 0 min(80vw, 720px);
+    aspect-ratio: 16/10;
+    border-radius: var(--radius-md); overflow: hidden;
+    scroll-snap-align: center;
+    position: relative;
+  }
+  .gallery-counter {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink-muted);
+    padding: 16px clamp(20px, 3.6vw, 72px) 0;
+  }
+
+  /* ========== 13 · TESTIMONIOS ========== */
+  .testimonials {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: clamp(20px, 2.2vw, 36px);
+    padding: 0 clamp(20px, 3.6vw, 72px);
+  }
+  @media (max-width: 860px){ .testimonials { grid-template-columns: 1fr; } }
+  .testimonial {
+    padding: 36px 32px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(14px) saturate(1.2);
+    -webkit-backdrop-filter: blur(14px) saturate(1.2);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 18px 40px -20px rgba(20, 32, 27, 0.14);
+    border-radius: var(--radius-md);
+    display: flex; flex-direction: column; gap: 24px;
+    min-height: 320px;
+    transition: transform .4s var(--e-out), box-shadow .4s var(--e-out);
+  }
+  .testimonial:hover { transform: translateY(-3px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 28px 60px -20px rgba(20, 32, 27, 0.2); }
+  .testimonial blockquote {
+    margin: 0; flex: 1;
+    font-family: var(--f-display); font-weight: 300; font-style: italic;
+    font-size: clamp(19px, 1.6vw, 24px); line-height: 1.35; letter-spacing: -.005em;
+    color: var(--ink);
+  }
+  .testimonial blockquote::before {
+    content: "“"; display: block; font-size: 48px; line-height: .5;
+    color: var(--gold); margin-bottom: 18px;
+  }
+  .t-author { display: flex; align-items: center; gap: 14px; }
+  .t-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(160deg, #8A9464, #3F4A2C);
+    flex-shrink: 0;
+  }
+  .t-meta { display: flex; flex-direction: column; gap: 2px; }
+  .t-name { font-weight: 500; font-size: 14.5px; color: var(--ink); }
+  .t-role { font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-muted); }
+  .t-placeholder {
+    border-style: dashed; background: var(--bg-soft);
+  }
+  .t-placeholder blockquote { color: var(--ink-muted); }
+
+  /* ========== 14 · FAQ ========== */
+  .faq-wrap {
+    max-width: 880px; margin: 0 auto;
+    padding: 0 clamp(20px, 3.6vw, 72px);
+  }
+  .faq-item { border-bottom: 1px solid var(--line); }
+  .faq-item:first-child { border-top: 1px solid var(--line); }
+  .faq-q {
+    display: flex; justify-content: space-between; align-items: center; gap: 24px;
+    width: 100%; padding: 26px 4px; background: none; border: 0;
+    font-family: var(--f-display); font-weight: 400; font-size: clamp(19px, 1.7vw, 24px);
+    color: var(--ink); text-align: left; cursor: pointer;
+    letter-spacing: -.005em;
+    transition: color .2s var(--e-out);
+  }
+  .faq-q:hover { color: var(--accent); }
+  .faq-q .sign {
+    width: 22px; height: 22px; flex-shrink: 0; position: relative;
+  }
+  .faq-q .sign::before, .faq-q .sign::after {
+    content: ""; position: absolute; background: currentColor;
+    transition: transform .3s var(--e-out);
+  }
+  .faq-q .sign::before { left: 0; right: 0; top: 50%; height: 1.5px; transform: translateY(-50%); }
+  .faq-q .sign::after { top: 0; bottom: 0; left: 50%; width: 1.5px; transform: translateX(-50%); }
+  .faq-item.open .faq-q .sign::after { transform: translateX(-50%) scaleY(0); }
+  .faq-a {
+    max-height: 0; overflow: hidden;
+    transition: max-height .4s var(--e-out);
+  }
+  .faq-a-inner { padding: 0 4px 28px; color: var(--ink-muted); font-size: 16px; line-height: 1.6; max-width: 64ch; }
+  .faq-item.open .faq-a { max-height: 300px; }
+
+  /* ========== 15 · CTA FINAL ========== */
+  .final-cta {
+    position: relative; min-height: 640px;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    color: var(--on-dark); padding: clamp(80px, 10vw, 140px) clamp(20px, 3.6vw, 72px);
+    overflow: hidden;
+  }
+  .final-bg { position: absolute; inset: 0; z-index: 0; }
+  .final-img {
+    position: absolute; inset: 0;
+    background-image: url("img/render-3d-sinerx-02.webp");
+    background-size: cover; background-position: center;
+    background-color: #1C2419;
+  }
+  .final-veil { position: absolute; inset: 0; background: rgba(14,19,15,.42); }
+  .final-inner { position: relative; z-index: 2; max-width: 760px; }
+  .final-inner h2 {
+    font-family: var(--f-display); font-weight: 300;
+    font-size: clamp(36px, 5.4vw, 78px); line-height: 1; letter-spacing: -.025em;
+    margin: 0 0 24px;
+  }
+  .final-inner h2 em { font-style: italic; color: #E6D9A8; }
+  .final-inner p {
+    font-size: clamp(16px, 1.2vw, 19px); line-height: 1.5;
+    color: rgba(236,230,214,.85); margin: 0 0 40px;
+    max-width: 52ch; margin-inline: auto;
+  }
+  .final-micro {
+    margin-top: 32px;
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: rgba(236,230,214,.65);
+    display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+  }
+  .final-micro span { display: inline-flex; align-items: center; gap: 8px; }
+  .final-micro i { width: 3px; height: 3px; border-radius: 50%; background: #D7B34A; }
+
+  /* ========== 16 · FOOTER ========== */
+  footer.foot {
+    background: var(--bg-dark); color: var(--on-dark);
+    padding: clamp(64px, 8vw, 100px) clamp(20px, 3.6vw, 72px) 32px;
+  }
+  .foot-grid {
+    display: grid; grid-template-columns: 1.6fr 1fr 1fr;
+    gap: clamp(32px, 4vw, 60px);
+    padding-bottom: 56px; border-bottom: 1px solid var(--line-dark);
+  }
+  @media (max-width: 860px){ .foot-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px){ .foot-grid { grid-template-columns: 1fr; } }
+  .foot-col h5 {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: rgba(236,230,214,.55); margin: 0 0 20px;
+  }
+  .foot-col ul { list-style: none; padding: 0; margin: 0; }
+  .foot-col ul li { margin: 0 0 12px; }
+  .foot-col a { color: rgba(236,230,214,.82); text-decoration: none; font-size: 14.5px; transition: color .2s var(--e-out); }
+  .foot-col a:hover { color: #D7B34A; }
+  .foot-brand .fb-logo {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 18px;
+  }
+  .foot-brand .fb-mark {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: #D7B34A; color: var(--bg-dark);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: var(--f-display); font-size: 18px;
+  }
+  .foot-brand .fb-txt { font-family: var(--f-display); font-weight: 400; font-size: 20px; letter-spacing: -.01em; }
+  .foot-brand p { margin: 0; font-size: 14.5px; line-height: 1.55; color: rgba(236,230,214,.7); max-width: 32ch; }
+  .foot-bottom {
+    padding-top: 32px;
+    display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+    color: rgba(236,230,214,.5);
+  }
+  .foot-socials { display: flex; gap: 16px; }
+  .foot-socials a {
+    width: 36px; height: 36px; border-radius: 50%;
+    border: 1px solid rgba(236,230,214,.2);
+    display: inline-flex; align-items: center; justify-content: center;
+    color: rgba(236,230,214,.7);
+  }
+  .foot-socials a:hover { color: #D7B34A; border-color: #D7B34A; }
+
+  /* Legal disclaimer */
+  .foot-disclaimer {
+    margin-top: 32px; padding-top: 28px;
+    border-top: 1px solid var(--line-dark);
+  }
+  .foot-disclaimer p {
+    font-family: var(--f-sans); font-size: 11px; line-height: 1.65;
+    color: rgba(236,230,214,.38);
+    margin: 0 0 14px; max-width: 110ch;
+  }
+  .foot-disclaimer p:last-child { margin-bottom: 0; }
+  .foot-disclaimer p strong { color: rgba(236,230,214,.5); font-weight: 500; }
+
+  /* fade-in on scroll */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .9s var(--e-out), transform .9s var(--e-out); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .reveal-left { opacity: 0; transform: translateX(-24px); transition: opacity .9s var(--e-out), transform .9s var(--e-out); }
+  .reveal-left.in { opacity: 1; transform: translateX(0); }
+  .reveal-right { opacity: 0; transform: translateX(24px); transition: opacity .9s var(--e-out), transform .9s var(--e-out); }
+  .reveal-right.in { opacity: 1; transform: translateX(0); }
+  .reveal-scale { opacity: 0; transform: scale(.96); transition: opacity .9s var(--e-out), transform .9s var(--e-out); }
+  .reveal-scale.in { opacity: 1; transform: scale(1); }
+
+  /* ========== FLOATING GLASS ORBS (ambient) ========== */
+  .orbs { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 0; }
+  .orb {
+    position: absolute; border-radius: 50%;
+    filter: blur(60px); opacity: .45;
+    animation: float 16s var(--e-in-out) infinite;
+  }
+  .orb-1 { width: 380px; height: 380px; background: radial-gradient(circle, #8AA266, transparent 70%); top: -10%; left: -6%; }
+  .orb-2 { width: 300px; height: 300px; background: radial-gradient(circle, #D7B34A, transparent 70%); bottom: -8%; right: -4%; animation-delay: -6s; opacity: .28; }
+  .orb-3 { width: 260px; height: 260px; background: radial-gradient(circle, #5F6F3E, transparent 70%); top: 40%; right: 20%; animation-delay: -10s; opacity: .22; }
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -40px) scale(1.08); }
+    66% { transform: translate(-20px, 30px) scale(.95); }
+  }
+
+  /* ========== GLASS CARD refinements ========== */
+  .glass {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(18px) saturate(1.3);
+    -webkit-backdrop-filter: blur(18px) saturate(1.3);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      0 20px 50px -20px rgba(20, 32, 27, 0.18);
+  }
+  .glass-dark {
+    background: rgba(236, 230, 214, 0.08);
+    backdrop-filter: blur(22px) saturate(1.3);
+    -webkit-backdrop-filter: blur(22px) saturate(1.3);
+    border: 1px solid rgba(236, 230, 214, 0.18);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.12),
+      0 24px 60px -24px rgba(0, 0, 0, 0.5);
+  }
+
+  /* concept cards — subtle glass */
+  .concept-card {
+    background: rgba(255, 255, 255, 0.65) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  .concept-card::before {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,.35), transparent 55%);
+    pointer-events: none; opacity: 0; transition: opacity .4s var(--e-out);
+    border-radius: inherit;
+  }
+  .concept-card { position: relative; }
+  .concept-card:hover::before { opacity: 1; }
+
+  /* amenity hover + pointer */
+  .amenity { cursor: zoom-in; transition: transform .4s var(--e-out); }
+  .amenity img { transition: transform .6s var(--e-out); }
+  .amenity:hover img { transform: scale(1.05); }
+  .amenity::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 55%, rgba(14,19,15,.4));
+    pointer-events: none; opacity: .6; transition: opacity .3s var(--e-out);
+  }
+  .amenity:hover::after { opacity: .85; }
+  .amenity .zoom-ic {
+    position: absolute; top: 14px; right: 14px; z-index: 2;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(236,230,214,.18);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(236,230,214,.3);
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--on-dark);
+    opacity: 0; transform: translateY(-4px);
+    transition: opacity .3s var(--e-out), transform .3s var(--e-out);
+  }
+  .amenity:hover .zoom-ic { opacity: 1; transform: translateY(0); }
+
+  /* gallery hover */
+  .gallery-item { cursor: zoom-in; transition: transform .4s var(--e-out); }
+  .gallery-item img { transition: transform .6s var(--e-out); }
+  .gallery-item:hover img { transform: scale(1.04); }
+
+  /* badge float */
+  .hero-badge { animation: badgeFloat 5s var(--e-in-out) infinite; }
+  @keyframes badgeFloat { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-4px); } }
+
+  /* ========== LIGHTBOX ========== */
+  .lightbox {
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(14, 19, 15, 0.86);
+    backdrop-filter: blur(24px) saturate(1.2);
+    -webkit-backdrop-filter: blur(24px) saturate(1.2);
+    display: none; align-items: center; justify-content: center;
+    padding: clamp(16px, 3vw, 48px);
+    opacity: 0;
+  }
+  .lightbox.open { display: flex; animation: lbIn .35s var(--e-out) forwards; }
+  @keyframes lbIn { to { opacity: 1; } }
+
+  .lb-stage {
+    position: relative; max-width: min(1200px, 94vw); max-height: 86vh;
+    display: flex; flex-direction: column; align-items: center; gap: 18px;
+    animation: lbScale .5s var(--e-out);
+  }
+  @keyframes lbScale { from { transform: scale(.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  .lb-stage img {
+    max-width: 100%; max-height: 78vh; object-fit: contain;
+    border-radius: var(--radius-md);
+    box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.6);
+  }
+  .lb-caption {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em;
+    text-transform: uppercase; color: rgba(236, 230, 214, 0.75);
+    text-align: center;
+  }
+  .lb-counter {
+    position: absolute; top: 24px; left: 24px;
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em;
+    text-transform: uppercase; color: rgba(236, 230, 214, 0.55);
+    padding: 8px 14px;
+    background: rgba(236, 230, 214, 0.08);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(236, 230, 214, 0.18);
+    border-radius: 999px;
+  }
+  .lb-btn {
+    position: absolute; z-index: 3;
+    background: rgba(236, 230, 214, 0.1);
+    backdrop-filter: blur(16px) saturate(1.3);
+    -webkit-backdrop-filter: blur(16px) saturate(1.3);
+    border: 1px solid rgba(236, 230, 214, 0.24);
+    color: var(--on-dark);
+    width: 54px; height: 54px; border-radius: 50%;
+    font-size: 22px; line-height: 1; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .25s var(--e-out), transform .25s var(--e-out), border-color .25s var(--e-out);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 12px 30px -8px rgba(0, 0, 0, 0.4);
+  }
+  .lb-btn:hover { background: rgba(236, 230, 214, 0.22); border-color: rgba(236, 230, 214, 0.45); transform: scale(1.06); }
+  .lb-close { top: 24px; right: 24px; }
+  .lb-prev { left: 24px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 24px; top: 50%; transform: translateY(-50%); }
+  .lb-prev:hover { transform: translateY(-50%) scale(1.06); }
+  .lb-next:hover { transform: translateY(-50%) scale(1.06); }
+  @media (max-width: 640px) {
+    .lb-prev, .lb-next { top: auto; bottom: 24px; transform: none; }
+    .lb-prev { left: 24px; } .lb-next { right: 24px; }
+    .lb-prev:hover, .lb-next:hover { transform: scale(1.06); }
+  }
+
+  body.lb-open { overflow: hidden; }
+
+  /* ========== PRICE TAG (CTA final) ========== */
+  .price-tag {
+    display: inline-flex; flex-direction: column; align-items: center;
+    padding: 28px 48px;
+    margin: 12px auto 28px;
+    background: rgba(236, 230, 214, 0.08);
+    backdrop-filter: blur(22px) saturate(1.3);
+    -webkit-backdrop-filter: blur(22px) saturate(1.3);
+    border: 1px solid rgba(236, 230, 214, 0.22);
+    border-radius: var(--radius-md);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      0 24px 60px -20px rgba(0, 0, 0, 0.55);
+    position: relative;
+  }
+  .price-tag::before {
+    content: ""; position: absolute; top: -1px; left: 20%; right: 20%; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(215, 179, 74, 0.6), transparent);
+  }
+  .price-label {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .16em;
+    text-transform: uppercase; color: rgba(236, 230, 214, 0.6); margin-bottom: 10px;
+  }
+  .price-amount {
+    font-family: var(--f-display); font-weight: 300;
+    font-size: clamp(40px, 5.2vw, 72px); letter-spacing: -.025em;
+    color: #E6D9A8; line-height: 1;
+  }
+  .price-amount .unit { font-size: .45em; letter-spacing: .04em; color: rgba(230, 217, 168, 0.65); margin-left: 8px; font-family: var(--f-mono); text-transform: uppercase; }
+  .price-micro {
+    font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .14em;
+    text-transform: uppercase; color: rgba(236, 230, 214, 0.5); margin-top: 14px;
+  }
+  .cta-stack { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .cta-note {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em;
+    text-transform: uppercase; color: rgba(236, 230, 214, 0.55);
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .cta-note i { width: 6px; height: 6px; border-radius: 50%; background: #7FD37F; box-shadow: 0 0 0 0 rgba(127, 211, 127, 0.6); animation: pulse 2s var(--e-out) infinite; flex-shrink: 0; }
+  .cta-hours { align-items: flex-start; gap: 12px; line-height: 1.6; text-transform: none; letter-spacing: .04em; font-size: 11.5px; }
+  .cta-hours i { margin-top: 6px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-left, .reveal-right, .reveal-scale { opacity: 1; transform: none; transition: none; }
+    .pulse, .scroll-cue .line, .orb, .hero-badge, .cta-note i { animation: none !important; }
+  }
+
+  /* ========== CONTACT FORM (GHL) ========== */
+  .contact-form {
+    max-width: 580px; margin: 32px auto 0; text-align: left;
+    padding: clamp(28px, 3.5vw, 44px);
+    background: rgba(236, 230, 214, 0.07);
+    backdrop-filter: blur(24px) saturate(1.3);
+    -webkit-backdrop-filter: blur(24px) saturate(1.3);
+    border: 1px solid rgba(236, 230, 214, 0.2);
+    border-radius: var(--radius-md);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.14),
+      0 30px 80px -28px rgba(0, 0, 0, 0.55);
+    position: relative; overflow: hidden;
+    isolation: isolate; /* propio stacking context — evita bugs de compositing del iframe en Safari/Firefox */
+  }
+  .contact-form::before {
+    content: ""; position: absolute; top: -1px; left: 25%; right: 25%; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(215, 179, 74, 0.7), transparent);
+  }
+  /* Wrapper que aísla al iframe del backdrop-filter del padre */
+  .ghl-iframe-wrap {
+    position: relative; z-index: 1;
+    background: #FAF7F0; /* fondo crema sólido detrás del iframe mientras GHL carga */
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 462px;
+    transform: translateZ(0); /* fuerza compositing propio — fix iOS Safari */
+    -webkit-transform: translateZ(0);
+  }
+  .ghl-iframe-wrap iframe { display: block; width: 100%; }
+  .form-eyebrow {
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: .16em;
+    text-transform: uppercase; color: #D7B34A;
+    display: inline-flex; align-items: center; gap: 8px; margin-bottom: 8px;
+  }
+  .form-eyebrow i {
+    width: 6px; height: 6px; border-radius: 50%; background: #7FD37F;
+    box-shadow: 0 0 0 0 rgba(127, 211, 127, 0.6);
+    animation: pulse 2s var(--e-out) infinite;
+  }
+  .form-title {
+    font-family: var(--f-display); font-weight: 300;
+    font-size: clamp(22px, 2vw, 28px); letter-spacing: -.012em;
+    color: var(--on-dark); line-height: 1.15;
+    margin: 0 0 24px;
+  }
+  .form-title em { font-style: italic; color: #E6D9A8; }
+  .contact-form .form-row { margin-bottom: 16px; }
+  .contact-form label {
+    display: block;
+    font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .14em;
+    text-transform: uppercase; color: rgba(236, 230, 214, 0.65);
+    margin-bottom: 8px;
+  }
+  .contact-form input {
+    width: 100%; box-sizing: border-box;
+    padding: 14px 18px;
+    background: rgba(20, 32, 27, 0.36);
+    border: 1px solid rgba(236, 230, 214, 0.18);
+    border-radius: 8px;
+    color: var(--on-dark);
+    font-family: var(--f-sans); font-size: 15px;
+    transition: border-color .25s var(--e-out), background .25s var(--e-out), box-shadow .25s var(--e-out);
+  }
+  .contact-form input::placeholder { color: rgba(236, 230, 214, 0.35); }
+  .contact-form input:focus {
+    outline: none;
+    border-color: #D7B34A;
+    background: rgba(20, 32, 27, 0.5);
+    box-shadow: 0 0 0 3px rgba(215, 179, 74, 0.18);
+  }
+  .contact-form input:invalid:not(:placeholder-shown):not(:focus) {
+    border-color: #C77B5A;
+  }
+  .form-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  @media (max-width: 540px) { .form-grid { grid-template-columns: 1fr; } }
+  .contact-form button[type="submit"] {
+    width: 100%; justify-content: center;
+    margin-top: 12px;
+    background: #D7B34A; border-color: #D7B34A; color: #14201B;
+    cursor: pointer;
+  }
+  .contact-form button[type="submit"]:hover {
+    background: #E6C25E; border-color: #E6C25E;
+    transform: translateY(-1px);
+  }
+  .contact-form button[type="submit"][disabled] {
+    opacity: .6; pointer-events: none;
+  }
+  .contact-form button[type="submit"] svg {
+    width: 16px; height: 16px;
+    transition: transform .25s var(--e-out);
+  }
+  .contact-form button[type="submit"]:hover svg { transform: translateX(3px); }
+  .form-status {
+    margin-top: 16px;
+    font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em;
+    text-align: center; min-height: 18px;
+    line-height: 1.4;
+  }
+  .form-status.success { color: #9CCB68; }
+  .form-status.error { color: #E08866; }
+  .form-disclaimer {
+    margin: 14px 0 0;
+    font-size: 11.5px; line-height: 1.5;
+    color: rgba(236, 230, 214, 0.45);
+    text-align: center;
+  }
+  .form-disclaimer a { color: rgba(236, 230, 214, 0.72); text-decoration: underline; text-underline-offset: 2px; }
+  .form-disclaimer a:hover { color: #D7B34A; }
+
+  /* Repurposed FAB → contact link */
+  .contact-fab {
+    position: fixed; right: 22px; bottom: 22px; z-index: 60;
+    height: 54px;
+    padding: 0 22px 0 18px;
+    border-radius: 999px;
+    background: var(--bg-dark);
+    color: var(--on-dark);
+    display: inline-flex; align-items: center; gap: 10px;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 12px 32px -8px rgba(0, 0, 0, 0.4),
+      0 4px 12px rgba(0, 0, 0, 0.18);
+    text-decoration: none;
+    font-family: var(--f-sans); font-size: 13.5px; font-weight: 500;
+    letter-spacing: .02em;
+    border: 1px solid rgba(236, 230, 214, 0.2);
+    transition: transform .25s var(--e-out), background .25s var(--e-out);
+  }
+  .contact-fab:hover {
+    transform: translateY(-2px) scale(1.03);
+    background: var(--accent);
+  }
+  .contact-fab svg { width: 18px; height: 18px; flex-shrink: 0; }
+  @media (max-width: 540px) {
+    .contact-fab { padding: 0; width: 54px; justify-content: center; }
+    .contact-fab .fab-label { display: none; }
+  }
+</style>
+</head>
+
+<body class="gh">
+
+<!-- ========== NAV ========== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Garden Houses — inicio">
+      <img class="brand-logo" src="img/logo_garden.png" alt="Garden Houses" decoding="async">
+      <span class="brand-txt">
+        <span class="b2">BTO Constructora</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Menú principal">
+      <a href="#proyecto">Proyecto</a>
+      <a href="#tipologias">Tipologías</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#amenidades">Amenidades</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn-olive" href="#contacto">
+        <span class="btn-label-full">Quiero información</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#proyecto">Proyecto</a>
+    <a href="#tipologias">Tipologías</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="#amenidades">Amenidades</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</header>
+
+<!-- ========== 01 · HERO ========== -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-img"></div>
+    <div class="hero-veil"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="pulse"></span>
+      <span>Etapa 2 · Preventa abierta</span>
+    </div>
+    <h1 class="reveal">Una casa con <em>jardín</em> propio en el norte de <em>Armenia</em>.</h1>
+    <p class="hero-sub reveal">Garden Houses es un conjunto de casas diseñadas para vivir despacio. Verde privado, wellness integrado y la autoría de BTO Constructora.</p>
+    <div class="hero-actions reveal">
+      <a class="btn-olive lg" href="#contacto">
+        Hablar con un asesor
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn-line on-dark-txt" href="#tipologias">Ver tipologías disponibles ↓</a>
+    </div>
+    <div class="hero-meta">
+      <span><i></i> Etapa 1 vendida</span>
+      <span><i></i> Etapa 2 vendida 72%</span>
+      <span><i></i> Entrega 2028</span>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">
+    <span>Scroll</span>
+    <span class="line"></span>
+  </div>
+</section>
+
+<!-- ========== 02 · CONFIDENCE BAR (3 etapas) ========== -->
+<section class="confidence" aria-label="Estado de venta por etapa">
+  <div class="confidence-row confidence-row-3">
+    <div class="confidence-item">
+      <span class="confidence-icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+      </span>
+      <span><strong>Etapa 1 · 100% vendida</strong><br><span class="ci-sub">15 casas</span></span>
+    </div>
+    <div class="confidence-item">
+      <span class="confidence-icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18" stroke-width="2.5"/></svg>
+      </span>
+      <span><strong>Etapa 2 · 72% vendido</strong><br><span class="ci-sub">18 casas en preventa</span></span>
+    </div>
+    <div class="confidence-item">
+      <span class="confidence-icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-7h6v7"/></svg>
+      </span>
+      <span><strong>Etapa 3 · próximamente</strong><br><span class="ci-sub">En lista de espera</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 03 · INTRO NARRATIVA ========== -->
+<section class="section" id="proyecto">
+  <div class="narrative">
+    <div class="narrative-text reveal">
+      <span class="eyebrow eyebrow-gold">El proyecto</span>
+      <h2>Vivir con <em>jardín</em> vuelve a ser posible.</h2>
+      <p>En una ciudad que crece hacia arriba, Garden Houses propone lo contrario: bajar el ritmo, abrir la puerta al verde, y recuperar ese rincón donde caben una mesa, un libro y una tarde entera. No es nostalgia. Es arquitectura pensada para el Quindío de hoy.</p>
+      <div class="narrative-sig">— Juan Carlos Jaramillo, Arquitecto · CEO BTO</div>
+    </div>
+    <div class="narrative-img reveal">
+      <img class="img-cover" src="img/VERDE12_COMEDOR.webp" alt="Comedor Garden Houses abierto al jardín" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ========== 05 · CONCEPTO ========== -->
+<section class="section" id="concepto">
+  <div class="section-head center">
+    <span class="eyebrow eyebrow-gold">El concepto</span>
+    <div>
+      <h2 class="section-title">Tres ideas que definen <em>cada casa</em>.</h2>
+      <p class="section-lead" style="margin: 18px auto 0;">No son amenidades sueltas. Son una forma de vivir.</p>
+    </div>
+  </div>
+  <div class="concept-grid">
+    <article class="concept-card reveal">
+      <div class="concept-img"><img class="img-cover" src="img/56_FACHADA-POSTERIOR.webp" alt="Fachada posterior con jardín privado" loading="lazy"></div>
+      <div class="concept-body">
+        <span class="concept-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22V12M4 12c4 0 8-4 8-8 0 4 4 8 8 8-4 0-8 4-8 8 0-4-4-8-8-8z"/></svg>
+        </span>
+        <h3>Tu propio jardín.</h3>
+        <p>Cada casa tiene un jardín privado. No compartido, no simbólico. Un espacio real donde puedes sembrar, sentarte, leer o simplemente dejar que el clima del Quindío haga su trabajo.</p>
+      </div>
+    </article>
+    <article class="concept-card reveal">
+      <div class="concept-img"><img class="img-cover" src="img/zona-social-sinerx-01.webp" alt="Zona social con piscina y wellness" loading="lazy"></div>
+      <div class="concept-body">
+        <span class="concept-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 18c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M2 14c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/></svg>
+        </span>
+        <h3>Bienestar sin salir de casa.</h3>
+        <p>Piscina, sauna, turco y gimnasio funcional. Amenidades pensadas para descansar el cuerpo los días que la ciudad ya te cansó bastante.</p>
+      </div>
+    </article>
+    <article class="concept-card reveal">
+      <div class="concept-img"><img class="img-cover" src="img/fachada-casa-sinerx-02.webp" alt="Fachada de la casa con líneas limpias" loading="lazy"></div>
+      <div class="concept-body">
+        <span class="concept-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/></svg>
+        </span>
+        <h3>Lo bien hecho se nota.</h3>
+        <p>Cada casa fue pensada por el equipo de BTO bajo los mismos principios que han guiado al arquitecto Juan Carlos Jaramillo, su CEO y socio fundador de PROA, durante más de <strong style="color:var(--ink);font-weight:500">30 años de experiencia</strong> en el Eje Cafetero: funcionalidad, materiales nobles y proporciones que no pasan de moda.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ========== 06 · AMENIDADES ========== -->
+<section class="section" id="amenidades" style="background: var(--bg-soft);">
+  <div class="section-head">
+    <span class="eyebrow eyebrow-gold">Amenidades</span>
+    <div>
+      <h2 class="section-title">Un <em>club privado</em> dentro de tu casa.</h2>
+    </div>
+  </div>
+  <div class="amenities">
+    <div class="amenity a-pool reveal"><img class="img-cover" src="img/27_ZONA-SOCIAL_2.webp" alt="Piscina del conjunto" loading="lazy"><span class="zoom-ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.5-4.5M8 11h6M11 8v6"/></svg></span><span class="label">Piscina</span></div>
+    <div class="amenity a-sauna reveal"><img class="img-cover" src="img/23_ZONA-SOCIAL.webp" alt="Sauna" loading="lazy"><span class="zoom-ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.5-4.5M8 11h6M11 8v6"/></svg></span><span class="label">Sauna</span></div>
+    <div class="amenity a-turkish reveal"><img class="img-cover" src="img/25_ZONA-SOCIAL.webp" alt="Turco" loading="lazy"><span class="zoom-ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.5-4.5M8 11h6M11 8v6"/></svg></span><span class="label">Turco</span></div>
+    <div class="amenity a-gym reveal"><img class="img-cover" src="img/20_ZONA-SOCIAL_2.webp" alt="Gimnasio funcional" loading="lazy"><span class="zoom-ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.5-4.5M8 11h6M11 8v6"/></svg></span><span class="label">Gimnasio</span></div>
+    <div class="amenity a-playground reveal"><img class="img-cover" src="img/31_ZONAS-VERDES_2.webp" alt="Parque infantil entre zonas verdes" loading="lazy"><span class="zoom-ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.5-4.5M8 11h6M11 8v6"/></svg></span><span class="label">Parque infantil</span></div>
+    <div class="amenity a-pet reveal"><img class="img-cover" src="img/32_ZONAS-VERDES.webp" alt="Pet park" loading="lazy"><span class="zoom-ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.5-4.5M8 11h6M11 8v6"/></svg></span><span class="label">Pet park</span></div>
+  </div>
+</section>
+
+<!-- ========== 07 · TIPOLOGÍA · 2 PLANTAS ========== -->
+<section class="section" id="tipologias">
+  <div class="section-head">
+    <span class="eyebrow eyebrow-gold">La casa</span>
+    <div>
+      <h2 class="section-title">Una casa con jardín. <em>Dos plantas.</em> Sin sacrificar nada.</h2>
+      <p class="section-lead" style="margin-top: 18px;">152,52 m² construidos sobre un lote de 232,26 m². Tres alcobas, cuatro baños, estudio, dos balcones, vestier y zona de ropa independiente — una sola tipología pensada en cada detalle.</p>
+    </div>
+  </div>
+  <div class="typo-wrap">
+    <div class="typo-tabs" role="tablist" aria-label="Plantas de la casa">
+      <button class="typo-tab active" role="tab" data-typo="P1"><span class="t-num">01</span>Primer piso</button>
+      <button class="typo-tab" role="tab" data-typo="P2"><span class="t-num">02</span>Segundo piso</button>
+    </div>
+
+    <!-- Panel Piso 1 -->
+    <div class="typo-panel active" data-panel="P1">
+      <div class="typo-plan typo-plan-img">
+        <img src="img/gh_piso1_tipologia.webp" alt="Plano del primer piso de Garden Houses" loading="lazy">
+      </div>
+      <div class="typo-data">
+        <span class="floor-tag">Planta baja · social</span>
+        <h3 class="typo-name">Vivir hacia el <em style="font-style:italic">jardín</em>.</h3>
+        <p class="typo-blurb">Acceso, sala-comedor abierta hacia un jardín espectacular, cocina abierta integrada, estudio (opcional como cuarta habitación), baño social y zona de ropas con puerta oculta.</p>
+        <ul class="floor-features">
+          <li>Sala-comedor</li>
+          <li>Cocina abierta</li>
+          <li>Estudio <span style="color:var(--ink-muted);font-size:.85em">(opcional 4.ª habitación)</span></li>
+          <li>Baño social</li>
+          <li>Zona de ropas con puerta oculta</li>
+          <li>Jardín espectacular</li>
+          <li>2 parqueaderos</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Panel Piso 2 -->
+    <div class="typo-panel" data-panel="P2">
+      <div class="typo-plan typo-plan-img">
+        <img src="img/gh_piso2_tipologia.webp" alt="Plano del segundo piso de Garden Houses" loading="lazy">
+      </div>
+      <div class="typo-data">
+        <span class="floor-tag">Planta alta · privada</span>
+        <h3 class="typo-name">El descanso, en <em style="font-style:italic">privado</em>.</h3>
+        <p class="typo-blurb">Tres alcobas, cada una con su propio baño. Alcoba principal con vestier y balcón con vista al paisaje y al jardín; alcoba auxiliar con balcón propio.</p>
+        <ul class="floor-features">
+          <li>3 alcobas con baño propio</li>
+          <li>Alcoba principal con vestier</li>
+          <li>Balcón alcoba principal — vista al paisaje y al jardín</li>
+          <li>Balcón alcoba auxiliar</li>
+          <li>Hall de distribución</li>
+          <li>Iluminación natural plena</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ficha técnica -->
+  <div class="spec-card reveal">
+    <h3 class="spec-title">Ficha técnica</h3>
+    <div class="spec-grid">
+      <div class="spec-item"><span class="spec-label">Área construida</span><span class="spec-value">152,52 <em>m²</em></span></div>
+      <div class="spec-item"><span class="spec-label">Área de lote</span><span class="spec-value">232,26 <em>m²</em></span></div>
+      <div class="spec-item"><span class="spec-label">Alcobas</span><span class="spec-value">3</span></div>
+      <div class="spec-item"><span class="spec-label">Baños</span><span class="spec-value">4</span></div>
+      <div class="spec-item"><span class="spec-label">Parqueaderos</span><span class="spec-value">2</span></div>
+      <div class="spec-item"><span class="spec-label">Jardín privado</span><span class="spec-value">1</span></div>
+      <div class="spec-item"><span class="spec-label">Sala-comedor</span><span class="spec-value">1</span></div>
+      <div class="spec-item"><span class="spec-label">Cocina abierta</span><span class="spec-value">1</span></div>
+      <div class="spec-item"><span class="spec-label">Estudio / 4.ª hab.</span><span class="spec-value">Opc.</span></div>
+      <div class="spec-item"><span class="spec-label">Balcones</span><span class="spec-value">2</span></div>
+      <div class="spec-item"><span class="spec-label">Vestier principal</span><span class="spec-value">Sí</span></div>
+      <div class="spec-item"><span class="spec-label">Zona de ropa</span><span class="spec-value">Indep.</span></div>
+    </div>
+    <div class="spec-cta">
+      <span class="spec-note">18 casas en preventa Etapa 2 · 72% ya vendidas</span>
+      <a class="btn-olive" href="#contacto">
+        Separar mi casa
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== UBICACIÓN (después de tipologías) ========== -->
+<section class="section" id="ubicacion" style="background: var(--bg-soft); position: relative; overflow: hidden;">
+  <div class="orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-3"></span>
+  </div>
+  <div class="section-head" style="position: relative; z-index: 2;">
+    <span class="eyebrow eyebrow-gold">Ubicación</span>
+    <div>
+      <h2 class="section-title">Norte de Armenia. Donde la ciudad <em>respira</em>.</h2>
+    </div>
+  </div>
+  <div class="location" style="position: relative; z-index: 2;">
+    <div class="map-frame reveal-left">
+      <iframe
+        class="map-embed"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1528.0962144170614!2d-75.65300443010292!3d4.5667879534898255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38f5dfe91be70d%3A0x85f888b752dabf9c!2sDollarcity%20Mall%2019!5e0!3m2!1ses!2sco!4v1780417627676!5m2!1ses!2sco"
+        title="Ubicación de Garden Houses · norte de Armenia"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="reveal-right">
+      <p class="section-lead">En el norte de Armenia, un sector que conecta lo mejor de la ciudad: colegios, centros comerciales, clínicas y salidas rápidas a los ejes viales del Eje Cafetero. Una zona consolidada, con plusvalía sostenida y entorno residencial.</p>
+      <ul class="location-list">
+        <li><span class="ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 2 9l10 6 10-6-10-6zM2 9v6l10 6 10-6V9"/></svg></span><span>Colegios de referencia</span><span class="time">5 min</span></li>
+        <li><span class="ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2 4 6v15h16V6l-2-4H6zM4 6h16M9 10v4a3 3 0 0 0 6 0v-4"/></svg></span><span>Centros comerciales</span><span class="time">7 min</span></li>
+        <li><span class="ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18M3 12h18"/></svg></span><span>Clínicas principales</span><span class="time">8 min</span></li>
+        <li><span class="ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.5 14 10V4l-2-2-2 2v6L2 16.5l10-2 10 2z"/></svg></span><span>Aeropuerto El Edén</span><span class="time">15 min</span></li>
+        <li><span class="ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10h12v8H4zM16 13h3l2 3v2h-5M6 18a2 2 0 1 0 0 0.1M16 18a2 2 0 1 0 0 0.1"/></svg></span><span>Centro histórico</span><span class="time">10 min</span></li>
+        <li><span class="ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 20h20M4 20 8 4h8l4 16"/></svg></span><span>Autopista del Café</span><span class="time">5 min</span></li>
+      </ul>
+      <div style="margin-top:36px;">
+        <a class="btn-olive" href="#contacto">
+          Agendar visita guiada
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 11 · BTO ========== -->
+<section class="bto" id="bto">
+  <div class="bto-portrait reveal" aria-label="Obra de BTO Constructora">
+    <img src="img/porteria-proyecto-sinerx-01.webp" alt="Portería y acceso — obra ejecutada por BTO Constructora" loading="lazy">
+  </div>
+  <div class="reveal">
+    <span class="eyebrow">Quién construye</span>
+    <h2>Arquitectura bien hecha, pensada para ser <em style="font-style:italic">vivida plenamente</em>.</h2>
+    <p>BTO Constructora nace de la unión de <strong style="color:var(--on-dark);font-weight:500">Only Home</strong> —con más de 30 tiendas en Colombia— y el arquitecto <strong style="color:var(--on-dark);font-weight:500">Juan Carlos Jaramillo</strong>, socio fundador de <strong style="color:var(--on-dark);font-weight:500">PROA Constructora</strong>, con más de <strong style="color:#D7B34A;font-weight:500">30 años de experiencia</strong> en el Eje Cafetero. Una misma forma de entender la arquitectura: bien hecha, pensada para ser vivida plenamente.</p>
+    <blockquote class="bto-quote">"Una casa con jardín no es un lujo. Es una forma de recordarle a la ciudad que todavía sabemos vivir despacio."</blockquote>
+    <div class="bto-attribution">— Juan Carlos Jaramillo, CEO BTO</div>
+    <a class="btn-line on-dark-txt" href="#">Conocer todos los proyectos de BTO →</a>
+  </div>
+</section>
+
+<!-- ========== 12 · GALERÍA ========== -->
+<section class="section-sm" id="galeria" aria-label="Galería visual">
+  <div class="section-head">
+    <span class="eyebrow eyebrow-gold">Galería</span>
+    <div>
+      <h2 class="section-title">El proyecto sin <em>palabras</em>.</h2>
+    </div>
+  </div>
+  <div class="gallery" id="gallery">
+    <!-- 1. Detalles e interiores íntimos -->
+    <div class="gallery-item"><img class="img-cover" src="img/bano-principal-sinerx-01.webp" alt="Baño principal" loading="lazy"></div>
+    <div class="gallery-item"><img class="img-cover" src="img/cocina-proyecto-sinerx-01.webp" alt="Cocina abierta con materiales nobles" loading="lazy"></div>
+    <div class="gallery-item"><img class="img-cover" src="img/comedor-proyecto-sinerx-01.webp" alt="Comedor con ventanal al verde" loading="lazy"></div>
+    <div class="gallery-item"><img class="img-cover" src="img/habitacion-principal-sinerx-01.webp" alt="Alcoba principal con baño y vestier" loading="lazy"></div>
+    <div class="gallery-item"><img class="img-cover" src="img/escalera-proyecto-sinerx-01.webp" alt="Escalera entre el primer y segundo piso" loading="lazy"></div>
+    <div class="gallery-item"><img class="img-cover" src="img/hall-segundo-piso-sinerx-01.webp" alt="Hall del segundo piso" loading="lazy"></div>
+    <!-- 2. Espacios sociales interiores -->
+    <div class="gallery-item"><img class="img-cover" src="img/sala-estar-proyecto-sinerx-01.webp" alt="Sala-comedor con vista al jardín" loading="lazy"></div>
+    <div class="gallery-item"><img class="img-cover" src="img/lobby-proyecto-sinerx-01.webp" alt="Acceso interior y lobby" loading="lazy"></div>
+    <div class="gallery-item"><img class="img-cover" src="img/jardin-proyecto-sinerx-01.webp" alt="Jardín privado de cada casa" loading="lazy"></div>
+    <!-- 3. Amenidades -->
+    <div class="gallery-item"><img class="img-cover" src="img/27_ZONA-SOCIAL_2.webp" alt="Piscina del conjunto" loading="lazy"></div>
+    <div class="gallery-item"><img class="img-cover" src="img/20_ZONA-SOCIAL_2.webp" alt="Gimnasio funcional" loading="lazy"></div>
+    <div class="gallery-item"><img class="img-cover" src="img/31_ZONAS-VERDES_2.webp" alt="Parque infantil entre zonas verdes" loading="lazy"></div>
+    <!-- 4. Exteriores y fachadas -->
+    <div class="gallery-item"><img class="img-cover" src="img/fachada-posterior-sinerx-01.webp" alt="Fachada posterior abierta al jardín" loading="lazy"></div>
+    <div class="gallery-item"><img class="img-cover" src="img/fachada-casa-sinerx-02.webp" alt="Fachada lateral con líneas limpias" loading="lazy"></div>
+    <div class="gallery-item"><img class="img-cover" src="img/fachada-casa-sinerx-01.webp" alt="Fachada principal de la casa" loading="lazy"></div>
+    <div class="gallery-item"><img class="img-cover" src="img/porteria-proyecto-sinerx-01.webp" alt="Portería y acceso al conjunto" loading="lazy"></div>
+    <div class="gallery-item"><img class="img-cover" src="img/via-urbanismo-sinerx-02.webp" alt="Vías internas y urbanismo" loading="lazy"></div>
+    <!-- 5. Tomas generales (aéreas) -->
+    <div class="gallery-item"><img class="img-cover" src="img/vista-aerea-proyecto-sinerx-02.webp" alt="Vista aérea del conjunto al atardecer" loading="lazy"></div>
+    <div class="gallery-item"><img class="img-cover" src="img/vista-aerea-proyecto-sinerx-01.webp" alt="Vista aérea de Garden Houses en el norte de Armenia" loading="lazy"></div>
+  </div>
+  <div class="gallery-counter"><span id="gCount">01</span> / 19 · desliza →</div>
+</section>
+
+<!-- ========== 14 · FAQ ========== -->
+<section class="section" id="faq">
+  <div class="section-head center">
+    <span class="eyebrow eyebrow-gold">Preguntas frecuentes</span>
+    <div>
+      <h2 class="section-title">Lo que probablemente te estás <em>preguntando</em>.</h2>
+    </div>
+  </div>
+  <div class="faq-wrap">
+    <div class="faq-item">
+      <button class="faq-q"><span>¿Cuándo entregan Etapa 2?</span><span class="sign" aria-hidden="true"></span></button>
+      <div class="faq-a"><div class="faq-a-inner">La entrega está proyectada para 2028. Todo el cronograma de obra avanza dentro de los tiempos pactados.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q"><span>¿Puedo financiar con crédito hipotecario?</span><span class="sign" aria-hidden="true"></span></button>
+      <div class="faq-a"><div class="faq-a-inner">Sí. Trabajamos con aliados bancarios y te acompañamos sin costo en la gestión del crédito para el saldo final.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q"><span>¿Puedo escriturar a nombre de otra persona o de una empresa?</span><span class="sign" aria-hidden="true"></span></button>
+      <div class="faq-a"><div class="faq-a-inner">Sí. La escritura puede hacerse a nombre de persona natural o jurídica. Tu asesor comercial te orienta en el proceso.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q"><span>¿Incluye acabados?</span><span class="sign" aria-hidden="true"></span></button>
+      <div class="faq-a"><div class="faq-a-inner">Sí. Cada tipología se entrega con acabados definidos por BTO. Te compartimos la ficha técnica completa cuando un asesor te contacte.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q"><span>¿Hay administración mensual? ¿De cuánto?</span><span class="sign" aria-hidden="true"></span></button>
+      <div class="faq-a"><div class="faq-a-inner">Sí, como todo conjunto residencial. El valor estimado te lo confirma tu asesor comercial según la tipología.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 15 · CTA FINAL ========== -->
+<section class="final-cta" id="contacto">
+  <div class="final-bg" aria-hidden="true">
+    <div class="final-img"></div>
+    <div class="final-veil"></div>
+  </div>
+  <div class="final-inner">
+    <h2 class="reveal-scale">Etapa 2 no va a durar lo mismo que la <em>Etapa 1</em>.</h2>
+
+    <div class="price-tag reveal-scale" aria-label="Precio desde 945 millones de pesos colombianos">
+      <span class="price-label">Precios desde</span>
+      <span class="price-amount">$945 <span class="unit">millones</span></span>
+      <span class="price-micro">COP · valor de preventa Etapa 2</span>
+    </div>
+
+    <p class="reveal">Déjanos tus datos y un asesor comercial de BTO te contactará para mostrarte la casa, las formas de pago y resolver todas tus dudas.</p>
+
+    <!-- Formulario Go High Level (embed) -->
+    <div class="contact-form ghl-form reveal">
+      <div class="form-eyebrow"><i></i> Hablemos · Etapa 2</div>
+      <h3 class="form-title">Déjanos tus datos y te <em>contactaremos</em>.</h3>
+      <div class="ghl-iframe-wrap">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/6VpBZqJz486VuKL4DovD"
+          style="width:100%;height:462px;border:none;border-radius:8px;background:#FAF7F0;display:block;"
+          id="inline-6VpBZqJz486VuKL4DovD"
+          data-layout='{"id":"INLINE"}'
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="FORM - GH"
+          data-height="462"
+          data-layout-iframe-id="inline-6VpBZqJz486VuKL4DovD"
+          data-form-id="6VpBZqJz486VuKL4DovD"
+          title="FORM - GH"
+        ></iframe>
+      </div>
+      <p class="form-disclaimer">
+        Al enviar aceptas que un asesor comercial de BTO te contacte. Tus datos están protegidos bajo nuestra <a href="#">política de tratamiento de datos</a>.
+      </p>
+      <noscript>
+        <p style="color:#E08866;text-align:center;font-size:13px;margin-top:12px;">
+          Necesitas activar JavaScript para enviar el formulario. Si tu navegador bloquea scripts de seguimiento (uBlock, Brave Shields), desactívalos en esta página.
+        </p>
+      </noscript>
+    </div>
+    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+    <div class="cta-stack reveal" style="margin-top: 32px;">
+      <span class="cta-note cta-hours">
+        <i></i>
+        <span>
+          <strong style="color:rgba(236,230,214,.75);font-weight:500">Horario de atención</strong><br>
+          Lunes a viernes · 9:00 a 12:00 y 2:00 a 5:30<br>
+          Sábado · 9:00 a 4:00 pm
+        </span>
+      </span>
+    </div>
+
+    <div class="final-micro">
+      <span><i></i> Licencia aprobada</span>
+      <span><i></i> Etapa 1 · 100% vendida</span>
+      <span><i></i> Arq. Juan Carlos Jaramillo · 30 años (PROA)</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 16 · FOOTER ========== -->
+<footer class="foot">
+  <div class="foot-grid">
+    <div class="foot-col foot-brand">
+      <div class="fb-logo">
+        <span class="fb-mark">B</span>
+        <span class="fb-txt">BTO Constructora</span>
+      </div>
+      <p>Arquitectura del Eje Cafetero. Liderada por el arquitecto Juan Carlos Jaramillo, socio fundador de PROA, con más de 30 años de experiencia.</p>
+    </div>
+    <div class="foot-col">
+      <h5>Navegación</h5>
+      <ul>
+        <li><a href="#proyecto">El proyecto</a></li>
+        <li><a href="#tipologias">Tipologías</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#amenidades">Amenidades</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="#">Política de tratamiento de datos</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Aviso de privacidad</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 BTO Constructora · Todos los derechos reservados</span>
+    <div class="foot-socials">
+      <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.1 5 12 5 12 5s-4.1 0-7.2.2c-.4 0-1.2 0-2 .8C2.2 6.6 2 8 2 8s-.2 1.6-.2 3.3v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.8 2.3.9 1.7.2 7 .2 7 .2s4.1 0 7.2-.2c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1.5c0-1.6-.2-3.2-.2-3.2zM10 15V9l5 3-5 3z"/></svg></a>
+    </div>
+  </div>
+  <div class="foot-disclaimer">
+    <p>*Las áreas, precios y estadísticas demográficas pueden presentar cambios en el futuro.</p>
+    <p>*Este material es solo para fines ilustrativos y no constituye un documento contractual. Las imágenes, renders, planos y demás representaciones gráficas contenidas en este material son interpretaciones artísticas del proyecto y están sujetas a cambios sin previo aviso. Las dimensiones, áreas, acabados, colores, y demás características mencionadas en este documento son aproximadas y pueden variar durante la ejecución del proyecto. La constructora se reserva el derecho de hacer modificaciones a los planos, especificaciones, distribución de espacios, y otros aspectos del proyecto según sea necesario para el cumplimiento de normativas legales, mejoras técnicas, o decisiones de diseño. Cualquier cambio realizado se llevará a cabo bajo la supervisión de profesionales calificados y estará alineado con el estándar de calidad ofrecido. Los interesados deben consultar directamente con la constructora para obtener información actualizada y detallada antes de tomar cualquier decisión de compra. La constructora no será responsable por diferencias entre la información proporcionada en este material y la ejecución final del proyecto.</p>
+  </div>
+</footer>
+
+<!-- ========== LIGHTBOX ========== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imágenes" aria-hidden="true">
+  <div class="lb-counter" id="lbCounter">01 / 10</div>
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Cerrar (ESC)">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Anterior (←)">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 6l-6 6 6 6"/></svg>
+  </button>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Siguiente (→)">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
+  <div class="lb-stage">
+    <img id="lbImg" src="" alt="">
+    <div class="lb-caption" id="lbCaption"></div>
+  </div>
+</div>
+
+<!-- ========== CONTACT FAB ========== -->
+<a class="contact-fab" href="#contacto" aria-label="Ir al formulario de contacto">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v8a2.5 2.5 0 0 1-2.5 2.5H13l-4.5 4v-4H5.5A2.5 2.5 0 0 1 3 14.5v-8z"/></svg>
+  <span class="fab-label">Quiero información</span>
+</a>
+
+<script>
+  // Nav scroll state
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navMobile = document.getElementById('navMobile');
+  navToggle.addEventListener('click', () => {
+    const open = navMobile.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navMobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navMobile.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Tipologías tabs
+  const tabs = document.querySelectorAll('.typo-tab');
+  const panels = document.querySelectorAll('.typo-panel');
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    const key = tab.dataset.typo;
+    tabs.forEach(t => t.classList.toggle('active', t === tab));
+    panels.forEach(p => p.classList.toggle('active', p.dataset.panel === key));
+  }));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const btn = item.querySelector('.faq-q');
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Gallery counter
+  const gallery = document.getElementById('gallery');
+  const gCount = document.getElementById('gCount');
+  const items = gallery ? gallery.querySelectorAll('.gallery-item') : [];
+  if (gallery) {
+    gallery.addEventListener('scroll', () => {
+      const idx = Math.round(gallery.scrollLeft / (gallery.clientWidth * 0.85));
+      const n = Math.max(1, Math.min(items.length, idx + 1));
+      gCount.textContent = String(n).padStart(2, '0');
+    }, { passive: true });
+  }
+
+  // Reveal on scroll (supports .reveal, .reveal-left, .reveal-right, .reveal-scale)
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => io.observe(el));
+
+  // ========== LIGHTBOX ==========
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCaption = document.getElementById('lbCaption');
+  const lbCounter = document.getElementById('lbCounter');
+  let lbSet = []; let lbIdx = 0;
+
+  function lbShow() {
+    const item = lbSet[lbIdx];
+    lbImg.src = item.src;
+    lbImg.alt = item.alt || '';
+    lbCaption.textContent = item.caption || item.alt || '';
+    lbCounter.textContent = String(lbIdx + 1).padStart(2, '0') + ' / ' + String(lbSet.length).padStart(2, '0');
+  }
+  function lbOpen(set, idx) {
+    lbSet = set; lbIdx = idx;
+    lbShow();
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lb-open');
+  }
+  function lbClose() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lb-open');
+  }
+  const lbPrev = () => { lbIdx = (lbIdx - 1 + lbSet.length) % lbSet.length; lbShow(); };
+  const lbNext = () => { lbIdx = (lbIdx + 1) % lbSet.length; lbShow(); };
+
+  document.getElementById('lbClose').addEventListener('click', lbClose);
+  document.getElementById('lbPrev').addEventListener('click', lbPrev);
+  document.getElementById('lbNext').addEventListener('click', lbNext);
+  lb.addEventListener('click', (e) => { if (e.target === lb) lbClose(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') lbClose();
+    else if (e.key === 'ArrowLeft') lbPrev();
+    else if (e.key === 'ArrowRight') lbNext();
+  });
+
+  // Wire amenities to lightbox
+  const amenityEls = [...document.querySelectorAll('.amenity')];
+  const amenitySet = amenityEls.map(el => {
+    const img = el.querySelector('img');
+    const label = el.querySelector('.label')?.textContent.trim() || '';
+    return { src: img.src, alt: img.alt, caption: label };
+  });
+  amenityEls.forEach((el, i) => el.addEventListener('click', () => lbOpen(amenitySet, i)));
+
+  // Wire gallery items to lightbox
+  const galleryEls = [...document.querySelectorAll('.gallery-item')];
+  const gallerySet = galleryEls.map(el => {
+    const img = el.querySelector('img');
+    return { src: img.src, alt: img.alt, caption: img.alt };
+  });
+  galleryEls.forEach((el, i) => el.addEventListener('click', () => lbOpen(gallerySet, i)));
+
+  // Touch swipe support
+  let tX = 0;
+  lb.addEventListener('touchstart', e => { tX = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - tX;
+    if (Math.abs(dx) > 50) (dx < 0 ? lbNext() : lbPrev());
+  });
+
+  // Form de Go High Level — el iframe + form_embed.js manejan todo el envío.
+</script>
+
+</body>
+</html>

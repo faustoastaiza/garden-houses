@@ -1,0 +1,220 @@
+/* ============================================================
+   Fluid Glass — Redesign Style System
+   Editorial minimalism, architectural precision.
+   ============================================================ */
+
+:root {
+  /* Palette — warm neutrals, single saturated accent */
+  --bg:           #F4F1EC;   /* warm off-white (paper) */
+  --bg-soft:      #EAE6DF;   /* panel */
+  --bg-dark:      #14161A;   /* near-black */
+  --ink:          #1B1C1E;   /* primary text */
+  --ink-muted:    #5E5D58;   /* secondary */
+  --ink-faint:    #9A968E;   /* tertiary */
+  --line:         #D9D4CB;   /* hairline */
+  --line-dark:    #2A2C30;
+  --accent:       #B85A1E;   /* terracotta — single accent */
+  --on-dark:      #EFEBE4;
+
+  /* Type */
+  --f-display: "Fraunces", "Times New Roman", serif;
+  --f-sans:    "Neue Haas Grotesk Text", "Inter", -apple-system, system-ui, sans-serif;
+  --f-mono:    "JetBrains Mono", ui-monospace, monospace;
+
+  /* Scale (fluid) */
+  --t-xs:   clamp(11px, 0.72vw, 13px);
+  --t-sm:   clamp(13px, 0.86vw, 15px);
+  --t-body: clamp(15px, 1.02vw, 18px);
+  --t-lead: clamp(18px, 1.35vw, 22px);
+  --t-h4:   clamp(22px, 1.8vw,  28px);
+  --t-h3:   clamp(28px, 2.6vw,  42px);
+  --t-h2:   clamp(40px, 4.6vw,  72px);
+  --t-h1:   clamp(56px, 8.4vw, 148px);
+
+  /* Rhythm */
+  --r-xs: 6px; --r-sm: 12px; --r-md: 24px; --r-lg: 48px;
+  --r-xl: 96px; --r-2xl: 144px;
+
+  /* Edges */
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-lg: 14px;
+
+  /* Motion */
+  --e-out: cubic-bezier(.22,.61,.36,1);
+  --e-in-out: cubic-bezier(.65,.05,.35,1);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+body {
+  font-family: var(--f-sans);
+  font-size: var(--t-body);
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--bg);
+  font-feature-settings: "ss01", "ss02", "kern";
+}
+
+img { display: block; max-width: 100%; }
+
+/* Type utilities */
+.eyebrow {
+  font-family: var(--f-mono);
+  font-size: var(--t-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.display {
+  font-family: var(--f-display);
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: -0.025em;
+  line-height: 0.92;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+}
+.display em { font-style: italic; font-variation-settings: "opsz" 144, "SOFT" 100; }
+.h2 { font-family: var(--f-display); font-weight: 300; font-size: var(--t-h2); line-height: 1; letter-spacing: -0.02em; }
+.h2 em { font-style: italic; }
+.h3 { font-family: var(--f-display); font-weight: 400; font-size: var(--t-h3); line-height: 1.05; letter-spacing: -0.01em; }
+.lead { font-size: var(--t-lead); line-height: 1.4; color: var(--ink); max-width: 44ch; }
+.muted { color: var(--ink-muted); }
+.mono  { font-family: var(--f-mono); font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* Grid helper */
+.page {
+  padding-inline: clamp(20px, 3.2vw, 56px);
+}
+.grid12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(16px, 1.6vw, 28px);
+}
+
+/* Rule */
+.rule { height: 1px; background: var(--line); border: 0; margin: 0; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 22px;
+  font-family: var(--f-sans); font-size: var(--t-sm);
+  font-weight: 500; letter-spacing: 0.02em;
+  border: 1px solid var(--ink);
+  color: var(--bg);
+  background: var(--ink);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform .25s var(--e-out), background .25s var(--e-out);
+  text-decoration: none;
+}
+.btn:hover { background: var(--accent); border-color: var(--accent); }
+.btn .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: .65; }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 13px 20px;
+  font-family: var(--f-sans); font-size: var(--t-sm); font-weight: 500;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: color .25s var(--e-out), background .25s var(--e-out);
+}
+.btn-ghost:hover { background: var(--ink); color: var(--bg); }
+
+.link-arrow {
+  display: inline-flex; align-items: baseline; gap: 8px;
+  color: var(--ink); text-decoration: none;
+  font-weight: 500; font-size: var(--t-sm); letter-spacing: 0.02em;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: color .2s var(--e-out);
+}
+.link-arrow:hover { color: var(--accent); }
+
+/* Image treatments */
+.img-frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-soft);
+  border-radius: var(--radius-md);
+}
+.img-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Dark section */
+.dark {
+  background: var(--bg-dark);
+  color: var(--on-dark);
+}
+.dark .muted { color: #9A968E; }
+.dark .eyebrow { color: #9A968E; }
+.dark .rule { background: var(--line-dark); }
+.dark .btn { background: var(--on-dark); color: var(--bg-dark); border-color: var(--on-dark); }
+.dark .btn:hover { background: var(--accent); color: var(--on-dark); border-color: var(--accent); }
+.dark .btn-ghost { color: var(--on-dark); border-color: var(--on-dark); }
+.dark .btn-ghost:hover { background: var(--on-dark); color: var(--bg-dark); }
+
+/* Placeholder image stand-in (gradient + grain) */
+.placeholder-img {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(120% 80% at 30% 20%, rgba(255,255,255,.55), transparent 60%),
+    radial-gradient(90% 70% at 80% 90%, rgba(24,26,30,.25), transparent 60%),
+    linear-gradient(160deg, #C7BFB1, #9FA9AA 55%, #6E7376);
+}
+.placeholder-img::after {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+    radial-gradient(rgba(0,0,0,.08)      1px, transparent 1px);
+  background-size: 3px 3px, 3px 3px;
+  background-position: 0 0, 1px 1px;
+  mix-blend-mode: overlay;
+  opacity: .5;
+}
+.placeholder-img.warm { background: linear-gradient(160deg, #D9C8AE, #B08763 60%, #6D4A2B); }
+.placeholder-img.cool { background: linear-gradient(160deg, #CBD2D0, #8D9A9B 60%, #3E4649); }
+.placeholder-img.sand { background: linear-gradient(160deg, #E5DCCB, #B7A98E 60%, #7A6B4F); }
+.placeholder-img.stone{ background: linear-gradient(160deg, #BFB9AE, #8B887F 60%, #454640); }
+.placeholder-img.sky  { background: linear-gradient(180deg, #D9DDDD, #A8B1B2 60%, #4E5759); }
+.placeholder-img.dusk { background: linear-gradient(160deg, #C7A78C, #7E6E66 60%, #2B2A2B); }
+
+/* ============================================================
+   Garden Houses — paleta override
+   Verdes naturales (salvia/oliva/esmeralda) + crema + dorado mate
+   ============================================================ */
+.gh {
+  --bg:        #F3EFE6;   /* crema cálido */
+  --bg-soft:   #E6E0D1;   /* papel */
+  --bg-dark:   #14201B;   /* verde profundo casi negro */
+  --ink:       #1C2420;   /* tinta con tinte verde */
+  --ink-muted: #5A635B;
+  --ink-faint: #97998F;
+  --line:      #D5CFBF;
+  --line-dark: #28332D;
+  --accent:    #5F6F3E;   /* verde oliva sólido (CTA) */
+  --accent-2:  #3F5A3C;   /* verde salvia profundo */
+  --gold:      #A8832E;   /* dorado mate — acento editorial */
+  --on-dark:   #ECE6D6;
+}
+
+.gh.placeholder-img,
+.gh .placeholder-img { background: linear-gradient(160deg, #B7C2A0, #7E8E66 55%, #3F5233); }
+.gh .placeholder-img.garden   { background: linear-gradient(160deg, #C7D2AE, #7C8F5F 55%, #38472C); }
+.gh .placeholder-img.leaf     { background: linear-gradient(160deg, #A8B88A, #5F7443 55%, #2A3C24); }
+.gh .placeholder-img.pool     { background: linear-gradient(160deg, #C8D6CE, #7E9A96 55%, #36504E); }
+.gh .placeholder-img.wood     { background: linear-gradient(160deg, #D9C2A0, #A67D4E 55%, #5C3E20); }
+.gh .placeholder-img.stone    { background: linear-gradient(160deg, #C8C2B4, #8D8A7E 55%, #3D3F38); }
+.gh .placeholder-img.dusk     { background: linear-gradient(160deg, #C7A78C, #7E6E66 55%, #2B2A2B); }
+.gh .placeholder-img.facade   { background: linear-gradient(160deg, #CFCEC3, #6E7B66 55%, #1C2820); }
+.gh .placeholder-img.yoga     { background: linear-gradient(160deg, #D6D1B6, #8A9464 55%, #3F4A2C); }
+.gh .placeholder-img.aerial   { background: linear-gradient(180deg, #D2D8BE, #8FA372 55%, #2F4224); }
+.gh .placeholder-img.interior { background: linear-gradient(160deg, #E4DAC6, #B29977 55%, #5E4A2C); }
+.gh .placeholder-img.portrait { background: linear-gradient(160deg, #3A4238, #1E2621); }
+
