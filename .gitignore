@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Archivos de trabajo que NO van al servidor
+TESTING WEB BTO 1-handoff.zip
+extracted/
+v.html
+.claude/
+
+# Backups / temporales
+*.bak
+*.tmp
+*~

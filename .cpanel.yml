@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sinerxla/public_html/
+    - /bin/cp -f index.html $DEPLOYPATH
+    - /bin/cp -Rf assets $DEPLOYPATH
+    - /bin/cp -Rf img $DEPLOYPATH
