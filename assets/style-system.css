@@ -218,3 +218,102 @@ img { display: block; max-width: 100%; }
 .gh .placeholder-img.interior { background: linear-gradient(160deg, #E4DAC6, #B29977 55%, #5E4A2C); }
 .gh .placeholder-img.portrait { background: linear-gradient(160deg, #3A4238, #1E2621); }
 
+
+/* ============================================================
+   Modal de documentos legales (popup con scroll, sobre el landing)
+   ============================================================ */
+.doc-modal {
+  position: fixed; inset: 0; z-index: 220;
+  display: none; align-items: center; justify-content: center;
+  padding: clamp(12px, 4vw, 48px);
+  background: rgba(14, 19, 15, 0.55);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+}
+.doc-modal.open { display: flex; animation: docIn .3s var(--e-out) forwards; }
+@keyframes docIn { to { opacity: 1; } }
+body.doc-open { overflow: hidden; }
+
+.doc-panel {
+  position: relative;
+  width: min(760px, 100%); max-height: min(86vh, 900px);
+  display: flex; flex-direction: column;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 40px 100px -24px rgba(14, 19, 15, 0.5);
+  overflow: hidden;
+  animation: docScale .35s var(--e-out);
+}
+@keyframes docScale { from { transform: translateY(12px) scale(.98); opacity: 0; } to { transform: none; opacity: 1; } }
+
+.doc-head {
+  flex-shrink: 0;
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+  padding: clamp(24px, 3vw, 36px) clamp(24px, 4vw, 44px) 20px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(243, 239, 230, 0.9);
+  backdrop-filter: blur(8px);
+}
+.doc-head .eyebrow { display: block; margin-bottom: 10px; color: var(--gold); }
+.doc-head h2 {
+  font-family: var(--f-display); font-weight: 300;
+  font-size: clamp(22px, 2.6vw, 32px); line-height: 1.08; letter-spacing: -.018em;
+  margin: 0;
+}
+.doc-head .doc-sub {
+  font-family: var(--f-mono); font-size: var(--t-xs);
+  letter-spacing: .06em; color: var(--ink-muted); margin-top: 10px;
+}
+.doc-close {
+  flex-shrink: 0; width: 42px; height: 42px; border-radius: 50%;
+  border: 1px solid var(--line); background: #fff; color: var(--ink);
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: background .2s var(--e-out), border-color .2s var(--e-out), transform .2s var(--e-out);
+}
+.doc-close:hover { background: var(--bg-soft); border-color: var(--ink); transform: rotate(90deg); }
+
+.doc-body {
+  overflow-y: auto; -webkit-overflow-scrolling: touch;
+  padding: clamp(24px, 4vw, 40px) clamp(24px, 4vw, 44px) clamp(32px, 5vw, 48px);
+  scrollbar-width: thin; scrollbar-color: var(--line-dark) transparent;
+}
+.doc-body::-webkit-scrollbar { width: 8px; }
+.doc-body::-webkit-scrollbar-thumb { background: var(--line); border-radius: 999px; }
+.doc-body::-webkit-scrollbar-thumb:hover { background: var(--line-dark); }
+
+/* Tipografía del contenido legal (dentro del modal) */
+.legal-body { font-size: 15px; line-height: 1.7; color: var(--ink); }
+.legal-body > p { margin: 0 0 18px; }
+.legal-body .intro { color: var(--ink-muted); }
+.legal-body h2 {
+  font-family: var(--f-display); font-weight: 400;
+  font-size: clamp(19px, 1.9vw, 24px); line-height: 1.15; letter-spacing: -.01em;
+  margin: 36px 0 14px; padding-top: 24px; border-top: 1px solid var(--line);
+}
+.legal-body h2:first-child, .legal-body > *:first-child { margin-top: 0; }
+.legal-body h3 {
+  font-family: var(--f-sans); font-weight: 600; font-size: 15.5px;
+  margin: 26px 0 10px; color: var(--ink);
+}
+.legal-body ul, .legal-body ol { margin: 0 0 18px; padding-left: 22px; }
+.legal-body li { margin: 0 0 9px; line-height: 1.6; }
+.legal-body ul li::marker { color: var(--accent); }
+.legal-body ol li::marker { color: var(--ink-muted); font-family: var(--f-mono); font-size: .82em; }
+.legal-body strong { color: var(--ink); font-weight: 600; }
+.legal-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+.legal-body a:hover { color: var(--gold); }
+.legal-body hr { height: 1px; background: var(--line); border: 0; margin: 32px 0; }
+.legal-body .legal-note {
+  margin-top: 32px; padding: 20px 24px;
+  background: var(--bg-soft); border-radius: var(--radius-md);
+  font-size: 13.5px; line-height: 1.6; color: var(--ink-muted);
+}
+.legal-body .legal-note strong { color: var(--ink); }
+
+/* Disparadores (enlaces que abren el modal) */
+.doc-trigger { cursor: pointer; }
+@media (prefers-reduced-motion: reduce) {
+  .doc-modal.open, .doc-panel { animation: none; }
+  .doc-close:hover { transform: none; }
+}
