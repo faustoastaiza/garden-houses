@@ -450,11 +450,11 @@
   .amenities {
     padding: 0 clamp(20px, 3.6vw, 72px);
     display: grid; grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 280px;
+    grid-template-rows: 280px 280px 340px;
     gap: clamp(12px, 1.2vw, 20px);
   }
   .amenity { position: relative; overflow: hidden; border-radius: var(--radius-md); }
-  .amenity > img.img-cover { object-position: center 42%; }
+  .amenity > img.img-cover { object-position: center bottom; }
   .amenity .label {
     position: absolute; left: 16px; bottom: 16px;
     padding: 8px 14px; background: rgba(20,32,27,.72);
@@ -470,7 +470,7 @@
   .a-playground { grid-column: span 2; grid-row: span 1; }
   .a-pet        { grid-column: span 2; grid-row: span 1; }
   @media (max-width: 860px){
-    .amenities { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 220px; }
+    .amenities { grid-template-columns: repeat(2, 1fr); grid-template-rows: none; grid-auto-rows: 220px; }
     .amenity { grid-column: span 1 !important; grid-row: span 1 !important; }
     .a-pool { grid-column: span 2 !important; grid-row: span 2 !important; }
   }
