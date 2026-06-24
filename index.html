@@ -377,6 +377,8 @@
     position: relative; aspect-ratio: 4/5; border-radius: var(--radius-md);
     overflow: hidden; background: var(--bg-soft);
   }
+  .narrative-img.is-video { aspect-ratio: 16/9; background: #14201B; box-shadow: 0 24px 60px -28px rgba(20,32,27,.28); }
+  .narrative-img iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
 
   /* ========== 04 · UBICACIÓN ========== */
   .location {
@@ -1366,8 +1368,8 @@
       <p>En una ciudad que crece hacia arriba, Garden Houses propone lo contrario: bajar el ritmo, abrir la puerta al verde, y recuperar ese rincón donde caben una mesa, un libro y una tarde entera. No es nostalgia. Es arquitectura pensada para el Quindío de hoy.</p>
       <div class="narrative-sig">— Juan Carlos Jaramillo, Arquitecto · CEO BTO</div>
     </div>
-    <div class="narrative-img reveal">
-      <img class="img-cover" src="img/VERDE12_COMEDOR.webp" alt="Comedor Garden Houses abierto al jardín" loading="lazy">
+    <div class="narrative-img is-video reveal">
+      <iframe src="https://www.youtube-nocookie.com/embed/NpXG_uuo_X4?rel=0&amp;modestbranding=1" title="Garden Houses — el proyecto" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
   </div>
 </section>
