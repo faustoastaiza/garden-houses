@@ -2349,6 +2349,39 @@ src="https://www.facebook.com/tr?id=1456245753051788&ev=PageView&noscript=1"
 
   // Form de Go High Level — el iframe + form_embed.js manejan todo el envío.
 
+  // ========== EVENTO DE CONVERSIÓN: "formulario" (GA + Meta) ==========
+  // El formulario vive en un iframe de GoHighLevel (otro dominio). GHL envía
+  // un postMessage al enviarse; lo escuchamos y disparamos el evento en ambas.
+  (function () {
+    var fired = false;
+    function dispararFormulario() {
+      if (fired) return;
+      fired = true;
+      if (typeof gtag === 'function') {
+        gtag('event', 'formulario', {
+          event_category: 'lead',
+          event_label: 'Garden Houses Etapa 2'
+        });
+      }
+      if (typeof fbq === 'function') {
+        fbq('trackCustom', 'formulario');
+      }
+    }
+    window.addEventListener('message', function (e) {
+      // Seguridad: solo mensajes de dominios de GoHighLevel / LeadConnector
+      var origin = e.origin || '';
+      if (!/(leadconnectorhq|msgsndr|gohighlevel)\.com/i.test(origin)) return;
+      var d = e.data;
+      if (typeof d === 'string') { try { d = JSON.parse(d); } catch (err) {} }
+      var type = '';
+      if (d && typeof d === 'object') { type = d.type || d.event || d.name || ''; }
+      else if (typeof d === 'string') { type = d; }
+      if (typeof type === 'string' && /form.*submit|submitted|submission|lead.*captured/i.test(type)) {
+        dispararFormulario();
+      }
+    });
+  })();
+
   // ========== MODALES LEGALES (popup con scroll) ==========
   const docModals = {
     privacidad: document.getElementById('modalPrivacidad'),
