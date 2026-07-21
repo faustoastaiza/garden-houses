@@ -2392,6 +2392,9 @@ src="https://www.facebook.com/tr?id=1456245753051788&ev=PageView&noscript=1"
         });
       }
       if (typeof fbq === 'function') {
+        // Evento estándar de Meta (Cliente potencial) — para optimización de campañas
+        fbq('track', 'Lead', { content_name: 'Garden Houses Etapa 2' });
+        // Evento personalizado — para reporte detallado propio
         fbq('trackCustom', 'formulario');
       }
     }
