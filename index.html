@@ -2212,6 +2212,22 @@ src="https://www.facebook.com/tr?id=1456245753051788&ev=PageView&noscript=1"
 </a>
 
 <script>
+  // ========== TRACKING CENTRAL (GA4 + Meta Pixel) ==========
+  // Una sola función que dispara el mismo evento a ambas plataformas.
+  function trackEvent(name, params) {
+    params = params || {};
+    try { if (typeof gtag === 'function') gtag('event', name, params); } catch (e) {}
+    try { if (typeof fbq === 'function') fbq('trackCustom', name, params); } catch (e) {}
+  }
+
+  // CTAs hacia el formulario (nav, hero, ubicación, tipología, FAB, etc.)
+  document.querySelectorAll('a[href="#contacto"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var label = (el.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 60) || 'CTA';
+      trackEvent('cta_formulario', { ubicacion: label });
+    });
+  });
+
   // Nav scroll state
   const nav = document.getElementById('nav');
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
@@ -2237,6 +2253,7 @@ src="https://www.facebook.com/tr?id=1456245753051788&ev=PageView&noscript=1"
     const key = tab.dataset.typo;
     tabs.forEach(t => t.classList.toggle('active', t === tab));
     panels.forEach(p => p.classList.toggle('active', p.dataset.panel === key));
+    trackEvent('ver_tipologia', { piso: (tab.textContent || '').trim().replace(/\s+/g, ' ') });
   }));
 
   // FAQ accordion
@@ -2245,7 +2262,11 @@ src="https://www.facebook.com/tr?id=1456245753051788&ev=PageView&noscript=1"
     btn.addEventListener('click', () => {
       const isOpen = item.classList.contains('open');
       document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
+      if (!isOpen) {
+        item.classList.add('open');
+        var q = (btn.querySelector('span')?.textContent || '').trim().slice(0, 90);
+        trackEvent('abrir_faq', { pregunta: q });
+      }
     });
   });
 
@@ -2314,7 +2335,10 @@ src="https://www.facebook.com/tr?id=1456245753051788&ev=PageView&noscript=1"
     const label = el.querySelector('.label')?.textContent.trim() || '';
     return { src: img.src, alt: img.alt, caption: label };
   });
-  amenityEls.forEach((el, i) => el.addEventListener('click', () => lbOpen(amenitySet, i)));
+  amenityEls.forEach((el, i) => el.addEventListener('click', () => {
+    lbOpen(amenitySet, i);
+    trackEvent('ver_galeria', { fuente: 'amenidades', item: amenitySet[i].caption });
+  }));
 
   // Wire gallery items to lightbox
   const galleryEls = [...document.querySelectorAll('.gallery-item')];
@@ -2322,7 +2346,10 @@ src="https://www.facebook.com/tr?id=1456245753051788&ev=PageView&noscript=1"
     const img = el.querySelector('img');
     return { src: img.src, alt: img.alt, caption: img.alt };
   });
-  galleryEls.forEach((el, i) => el.addEventListener('click', () => lbOpen(gallerySet, i)));
+  galleryEls.forEach((el, i) => el.addEventListener('click', () => {
+    lbOpen(gallerySet, i);
+    trackEvent('ver_galeria', { fuente: 'galeria', posicion: i + 1 });
+  }));
 
   // Touch swipe support
   let tX = 0;
@@ -2336,6 +2363,7 @@ src="https://www.facebook.com/tr?id=1456245753051788&ev=PageView&noscript=1"
   document.querySelectorAll('.video-poster').forEach(poster => {
     poster.addEventListener('click', () => {
       const id = poster.dataset.yt;
+      trackEvent('video_play', { video: 'urbanismo' });
       const wrap = poster.parentElement;
       const iframe = document.createElement('iframe');
       iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1';
@@ -2396,6 +2424,7 @@ src="https://www.facebook.com/tr?id=1456245753051788&ev=PageView&noscript=1"
     m.classList.add('open');
     m.setAttribute('aria-hidden', 'false');
     document.body.classList.add('doc-open');
+    trackEvent('ver_legal', { documento: key });
     const body = m.querySelector('.doc-body');
     if (body) body.scrollTop = 0;
     const closeBtn = m.querySelector('.doc-close');
